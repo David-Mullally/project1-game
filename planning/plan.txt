@@ -1,0 +1,7 @@
+milsetone1: user can move player left/right
+
+
+
+milestone2: obstacles apperaring and moving in the UI and collision detection
+milestone3: obstacles appear in random positions
+            define area palyer can move in

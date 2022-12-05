@@ -1,7 +1,30 @@
-milsetone1: user can move player left/right
+Triple Triad Clone: 
 
+ 
 
+MVP
+step 1: user interface
 
-milestone2: obstacles apperaring and moving in the UI and collision detection
-milestone3: obstacles appear in random positions
-            define area palyer can move in
+  Game area setup: 
+    +empty board (3x3 grid)
+        - js board =   
+                 [  [{0,2},{1,2},{2,2}],                            IDs: 0 , 1 , 2
+                    [{0,1}, {1,1},{2,1}],                           IDs: 3 , 4 , 5
+                    [{0,0}, {1,0},{2,0}]    ]                       IDs: 6 , 7 , 8
+
+        - html board  = 
+                1 div for the board itself                          ID:     board
+                    3 nested divs for the rows                      IDs:    row1, row2, row3
+                        each row contains 3 divs for the cells      IDs:    cell1. cell2, cell3 
+
+        - js placeholders for each players deck
+        * one for each player 
+                    []
+
+        -html placeholders for each players deck
+        * one for each player
+
+        
+               
+         
+

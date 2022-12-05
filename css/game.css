@@ -1,0 +1,166 @@
+body{
+    align-items: center;
+    background-color: black;
+    color: bisque;
+    display: flex;
+    height: 40vw;
+    justify-content: space-around;
+    margin: 0;
+    opacity:0.85;
+    padding: 0;
+    width: 100vw;
+}
+
+
+
+.card-values{
+    color: black;
+    border: 1px dashed #880808;
+    border-radius: 50%;
+    font-size: 2vw;
+    height: 25%;
+    position: absolute;
+    width: 20%;
+}
+
+.card-value-top{
+   right: 40%;
+   
+}
+
+.card-value-right{
+    right: 0;
+    top: 40%;
+}
+
+.card-value-bottom{
+    bottom: 0;
+    right: 40%;
+}
+
+.card-value-left{
+    left: 0;
+    top: 40%;
+}
+
+.cell{
+    border: 0.1px dashed #880808;
+    border-radius: 5%;
+    height: 120%;
+    position: relative;
+    width: 120%;
+}
+
+.deck{
+    font-size: 1.6vw;
+}
+
+.the-players{
+    text-align: center;
+}
+
+#abandon-button{
+    color:#880808;
+    font-size: 2vw;
+    margin: 3vw 0 0 1vw;
+    padding: 0;
+    text-decoration: none;
+}
+
+#abandon-button:hover{
+    opacity: 0.9;
+}
+
+#action-button1, #action-button2{
+    font-size: 1.25vw;
+}
+
+#board{
+    align-items: center;
+    background-color: bisque;
+    border-radius: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 40vw;
+    justify-content: center;
+    margin-top: 10vw;
+    width: 50vw;
+}
+
+#board-area{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#one, #two, #three, #four, #five, #six, #seven, #eight, #nine{
+    height: 30%;
+    width: 30%;
+}
+#player1-hand{
+    width: 100%
+}
+
+
+#player1-name{
+    font-size: 2.5vw;
+}
+
+#player2-name{
+    font-size: 2.5vw;
+}
+
+
+#player1-points, #player2-points{
+    font-size: 3vw;
+}
+
+#player1-status, #player2-status{
+    font-size: 2vw;
+}
+
+#player1-token {
+    border-radius: 50%;
+    height: 4vw;
+    width:4vw;
+}
+
+#player2-token {
+    border-radius: 50%;
+    height: 4vw;
+    width: 4vw;
+}
+
+#restart-button {
+    color: rgb(234, 228, 228);
+    font-size: 2vw;
+    margin: 3vw 0 0 1vw;
+    opacity: 0.5;
+    padding: 0;
+    text-decoration: none;
+}
+
+#player2{
+    text-align: right;
+}
+
+#restart-button:hover{
+    opacity: 0.4;
+}
+
+#start-button1{
+    font-size: 2vw;
+}
+
+#start-button1:hover{
+    color: rgb(143, 141, 141);
+}
+
+#start-button2 {
+    font-size: 2vw;
+}
+
+#start-button2:hover {
+    color: rgb(42, 41, 41);
+}
+

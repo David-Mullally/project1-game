@@ -81,15 +81,18 @@ body{
     border-radius: 5%;
     display: flex;
     flex-wrap: wrap;
-    height: 40vw;
+    height: 30vw;
     justify-content: center;
     margin-top: 10vw;
+    position: relative;
     width: 50vw;
 }
 
 #board-area{
     display: flex;
     flex-direction: column;
+    position: relative;
+    top: 2vw;
     text-align: center;
 }
 
@@ -137,6 +140,7 @@ body{
     margin: 3vw 0 0 1vw;
     opacity: 0.5;
     padding: 0;
+    position: relative;
     text-decoration: none;
 }
 

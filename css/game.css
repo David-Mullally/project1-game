@@ -55,6 +55,14 @@ body{
     font-size: 1.6vw;
 }
 
+.square-numbers{
+    color: #000;
+    font-size: 2vw;
+    position: absolute;
+    right: 47%;
+    top: 40%;
+}
+
 .the-players{
     text-align: center;
 }

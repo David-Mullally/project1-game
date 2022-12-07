@@ -7,19 +7,19 @@ class Game {
     this.player1Token = document.getElementById("player1-token");
     this.player2Token = document.getElementById("");
     this.player1sHand = [
-      { t: 3, r: 4, d: 6, l: 7, p: 1 }, //player1Card0
-      { t: 1, r: 2, d: 5, l: 4, p: 1 }, //player1Card1
-      { t: 9, r: 4, d: 2, l: 8, p: 1 }, //player1Card2
-      { t: 7, r: 1, d: 5, l: 6, p: 1 }, //player1Card3
-      { t: 1, r: 4, d: 8, l: 7, p: 1 }, //player1Card2
+      { t: 3, r: 4, d: 6, l: 7 }, //player1Card0
+      { t: 1, r: 2, d: 5, l: 4 }, //player1Card1
+      { t: 9, r: 4, d: 2, l: 8 }, //player1Card2
+      { t: 7, r: 1, d: 5, l: 6 }, //player1Card3
+      { t: 1, r: 4, d: 8, l: 7 }, //player1Card4
     ];
 
     this.player2sHand = [
-      { t: 4, r: 6, d: 6, l: 5, p: 2 }, //player2Card0
-      { t: 9, r: 3, d: 2, l: 6, p: 2 }, //player2Card1
-      { t: 3, r: 4, d: 6, l: 7, p: 2 }, //player2Card2
-      { t: 1, r: 1, d: 7, l: 5, p: 2 }, //Player2Card3
-      { t: 2, r: 4, d: 2, l: 7, p: 2 }, //Player2Card4
+      { t: 4, r: 6, d: 6, l: 5 }, //player2Card0
+      { t: 9, r: 3, d: 2, l: 6 }, //player2Card1
+      { t: 3, r: 4, d: 6, l: 7 }, //player2Card2
+      { t: 1, r: 1, d: 7, l: 5 }, //Player2Card3
+      { t: 2, r: 4, d: 2, l: 7 }, //Player2Card4
     ];
 
     this.player1Card0 = document.getElementById("p1c1");
@@ -71,31 +71,31 @@ class Game {
     this.player2Token = document.getElementById("player2-token");
 
     this.backEndBoard = [
-      { t: 12, r: 12, d: 12, l: 12, p: 0 }, //DUMMYSQUARE0
-      { t: 12, r: 12, d: 12, l: 12, p: 0 }, //DUMMYSQUARE1
-      { t: 12, r: 12, d: 12, l: 12, p: 0 }, //DUMMYSQUARE2
-      { t: 12, r: 12, d: 12, l: 12, p: 0 }, //DUMMYSQUARE3
-      { t: 12, r: 12, d: 12, l: 12, p: 0 }, //DUMMYSQUARE4
-      { t: 12, r: 12, d: 12, l: 12, p: 0 }, //DUMMYSQUARE5
-      { t: 12, r: 12, d: 12, l: 12, p: 0 }, //SquareSix
-      { t: 12, r: 12, d: 12, l: 12, p: 0 }, //SquareSeven
-      { t: 12, r: 12, d: 12, l: 12, p: 0 }, //SquareEight
-      { t: 12, r: 12, d: 12, l: 12, p: 0 }, //DUMMYSQUARE9
-      { t: 12, r: 12, d: 12, l: 12, p: 0 }, //DUMMYSQUARE10
-      { t: 12, r: 12, d: 12, l: 12, p: 0 }, //SquareEleven
-      { t: 12, r: 12, d: 12, l: 12, p: 0 }, //squareTwelve
-      { t: 12, r: 12, d: 12, l: 12, p: 0 }, //SquareThirteen
-      { t: 12, r: 12, d: 12, l: 12, p: 0 }, //DUMMYSQUARE14
-      { t: 12, r: 12, d: 12, l: 12, p: 0 }, //DUMMYSQUARE15
-      { t: 12, r: 12, d: 12, l: 12, p: 0 }, //SquareSixteen
-      { t: 12, r: 12, d: 12, l: 12, p: 0 }, //SquareSeventeen
-      { t: 12, r: 12, d: 12, l: 12, p: 0 }, //SquareEighteen
-      { t: 12, r: 12, d: 12, l: 12, p: 0 }, //DUMMYSQUARE19
-      { t: 12, r: 12, d: 12, l: 12, p: 0 }, //DUMMYSQUARE20
-      { t: 12, r: 12, d: 12, l: 12, p: 0 }, //DUMMYSQUARE21
-      { t: 12, r: 12, d: 12, l: 12, p: 0 }, //DUMMYSQUARE22
-      { t: 12, r: 12, d: 12, l: 12, p: 0 }, //DUMMYSQUARE23
-      { t: 12, r: 12, d: 12, l: 12, p: 0 }, //DUMMYSQUARE24
+      { t: 12, r: 12, d: 12, l: 12 }, //DUMMYSQUARE0
+      { t: 12, r: 12, d: 12, l: 12 }, //DUMMYSQUARE1
+      { t: 12, r: 12, d: 12, l: 12 }, //DUMMYSQUARE2
+      { t: 12, r: 12, d: 12, l: 12 }, //DUMMYSQUARE3
+      { t: 12, r: 12, d: 12, l: 12 }, //DUMMYSQUARE4
+      { t: 12, r: 12, d: 12, l: 12 }, //DUMMYSQUARE5
+      { t: 0, r: 0, d: 0, l: 0 }, //SquareSix
+      { t: 0, r: 0, d: 0, l: 0 }, //SquareSeven
+      { t: 0, r: 0, d: 0, l: 0 }, //SquareEight
+      { t: 12, r: 12, d: 12, l: 12 }, //DUMMYSQUARE9
+      { t: 12, r: 12, d: 12, l: 12 }, //DUMMYSQUARE10
+      { t: 0, r: 0, d: 0, l: 0 }, //SquareEleven
+      { t: 0, r: 0, d: 0, l: 0 }, //squareTwelve
+      { t: 0, r: 0, d: 0, l: 0 }, //SquareThirteen
+      { t: 12, r: 12, d: 12, l: 12 }, //DUMMYSQUARE14
+      { t: 12, r: 12, d: 12, l: 12 }, //DUMMYSQUARE15
+      { t: 0, r: 0, d: 0, l: 0 }, //SquareSixteen
+      { t: 0, r: 0, d: 0, l: 0 }, //SquareSeventeen
+      { t: 0, r: 0, d: 0, l: 0 }, //SquareEighteen
+      { t: 12, r: 12, d: 12, l: 12 }, //DUMMYSQUARE19
+      { t: 12, r: 12, d: 12, l: 12 }, //DUMMYSQUARE20
+      { t: 12, r: 12, d: 12, l: 12 }, //DUMMYSQUARE21
+      { t: 12, r: 12, d: 12, l: 12 }, //DUMMYSQUARE22
+      { t: 12, r: 12, d: 12, l: 12 }, //DUMMYSQUARE23
+      { t: 12, r: 12, d: 12, l: 12 }, //DUMMYSQUARE24
     ];
 
     // Board squares
@@ -208,7 +208,7 @@ class Game {
 
     this.player1Token.style.backgroundColor = this.inactiveColor;
     this.player2Token.style.backgroundColor = this.inactiveColor;
-    this.interval = 4000;
+    this.interval = 7000;
     setTimeout(() => {
       const player1sName = prompt("Enter your name: player1");
       this.player1sNameDisplay.innerText = player1sName;
@@ -296,59 +296,35 @@ class Game {
         this.player2Color;
       if (
         this.backEndBoard[this.numberSquare2].t >
-          this.backEndBoard[this.numberSquare2 - 5].d &&
-        this.backEndBoard[this.numberSquare2 - 5].p === 1
+        this.backEndBoard[this.numberSquare2 - 5].d
       ) {
         this.boardSquaresFrontEnd[
           this.numberSquare2 - 5
         ].style.backgroundColor = this.player2Color;
-        this.backEndBoard[this.numberSquare2 - 5].p = 2;
-        this.player2PointsCounter++;
-        this.player1PointsCounter--;
-        this.player1Points.innerText = this.player1PointsCounter;
-        this.player2Points.innerText = this.player2PointsCounter;
       }
       if (
         this.backEndBoard[this.numberSquare2].r >
-          this.backEndBoard[this.numberSquare2 + 1].l &&
-        this.backEndBoard[this.numberSquare2 + 1].p === 1
+        this.backEndBoard[this.numberSquare2 + 1].l
       ) {
         this.boardSquaresFrontEnd[
           this.numberSquare2 + 1
         ].style.backgroundColor = this.player2Color;
-        this.backEndBoard[this.numberSquare2 + 1].p = 2;
-        this.player2PointsCounter++;
-        this.player1PointsCounter--;
-        this.player1Points.innerText = this.player1PointsCounter;
-        this.player2Points.innerText = this.player2PointsCounter;
       }
       if (
         this.backEndBoard[this.numberSquare2].d >
-          this.backEndBoard[this.numberSquare2 + 5].t &&
-        this.backEndBoard[this.numberSquare2 + 5].p === 1
+        this.backEndBoard[this.numberSquare2 + 5].t
       ) {
         this.boardSquaresFrontEnd[
           this.numberSquare2 + 5
         ].style.backgroundColor = this.player2Color;
-        this.backEndBoard[this.numberSquare2 + 5].p = 2;
-        this.player2PointsCounter++;
-        this.player1PointsCounter--;
-        this.player1Points.innerText = this.player1PointsCounter;
-        this.player2Points.innerText = this.player2PointsCounter;
       }
       if (
         this.backEndBoard[this.numberSquare2].l >
-          this.backEndBoard[this.numberSquare2 - 1].r &&
-        this.backEndBoard[this.numberSquare2 - 1].p === 1
+        this.backEndBoard[this.numberSquare2 - 1].r
       ) {
         this.boardSquaresFrontEnd[
           this.numberSquare2 - 1
         ].style.backgroundColor = this.player2Color;
-        this.backEndBoard[this.numberSquare2 - 1].p = 2;
-        this.player2PointsCounter++;
-        this.player1PointsCounter--;
-        this.player1Points.innerText = this.player1PointsCounter;
-        this.player2Points.innerText = this.player2PointsCounter;
       }
       this.counter++;
     }, this.interval * 9);
@@ -382,59 +358,35 @@ class Game {
         this.player1Color;
       if (
         this.backEndBoard[this.numberSquare3].t >
-          this.backEndBoard[this.numberSquare3 - 5].d &&
-        this.backEndBoard[this.numberSquare3 - 5].p === 2
+        this.backEndBoard[this.numberSquare3 - 5].d
       ) {
         this.boardSquaresFrontEnd[
           this.numberSquare3 - 5
         ].style.backgroundColor = this.player1Color;
-        this.backEndBoard[this.numberSquare3 - 5].p = 1;
-        this.player1PointsCounter++;
-        this.player2PointsCounter--;
-        this.player1Points.innerText = this.player1PointsCounter;
-        this.player2Points.innerText = this.player2PointsCounter;
       }
       if (
         this.backEndBoard[this.numberSquare3].r >
-          this.backEndBoard[this.numberSquare3 + 1].l &&
-        this.backEndBoard[this.numberSquare3 + 1].p === 2
+        this.backEndBoard[this.numberSquare3 + 1].l
       ) {
         this.boardSquaresFrontEnd[
           this.numberSquare3 + 1
         ].style.backgroundColor = this.player1Color;
-        this.backEndBoard[this.numberSquare3 + 1].p = 1;
-        this.player1PointsCounter++;
-        this.player2PointsCounter--;
-        this.player1Points.innerText = this.player1PointsCounter;
-        this.player2Points.innerText = this.player2PointsCounter;
       }
       if (
         this.backEndBoard[this.numberSquare3].d >
-          this.backEndBoard[this.numberSquare3 + 5].t &&
-        this.backEndBoard[this.numberSquare3 + 5].p === 2
+        this.backEndBoard[this.numberSquare3 + 5].t
       ) {
         this.boardSquaresFrontEnd[
           this.numberSquare3 + 5
         ].style.backgroundColor = this.player1Color;
-        this.backEndBoard[this.numberSquare3 + 5].p = 1;
-        this.player1PointsCounter++;
-        this.player2PointsCounter--;
-        this.player1Points.innerText = this.player1PointsCounter;
-        this.player2Points.innerText = this.player2PointsCounter;
       }
       if (
         this.backEndBoard[this.numberSquare3].l >
-          this.backEndBoard[this.numberSquare3 - 1].r &&
-        this.backEndBoard[this.numberSquare3 - 1].p === 2
+        this.backEndBoard[this.numberSquare3 - 1].r
       ) {
         this.boardSquaresFrontEnd[
           this.numberSquare3 - 1
         ].style.backgroundColor = this.player1Color;
-        this.backEndBoard[this.numberSquare3 - 1].p = 1;
-        this.player1PointsCounter++;
-        this.player2PointsCounter--;
-        this.player1Points.innerText = this.player1PointsCounter;
-        this.player2Points.innerText = this.player2PointsCounter;
       }
       console.log(this.backEndBoard);
       this.counter++;
@@ -467,59 +419,35 @@ class Game {
         this.player2Color;
       if (
         this.backEndBoard[this.numberSquare5].t >
-          this.backEndBoard[this.numberSquare5 - 5].d &&
-        this.backEndBoard[this.numberSquare5 - 5].p === 1
+        this.backEndBoard[this.numberSquare5 - 5].d
       ) {
         this.boardSquaresFrontEnd[
           this.numberSquare5 - 5
         ].style.backgroundColor = this.player2Color;
-        this.backEndBoard[this.numberSquare5 - 5].p = 2;
-        this.player2PointsCounter++;
-        this.player1PointsCounter--;
-        this.player1Points.innerText = this.player1PointsCounter;
-        this.player2Points.innerText = this.player2PointsCounter;
       }
       if (
         this.backEndBoard[this.numberSquare5].r >
-          this.backEndBoard[this.numberSquare5 + 1].l &&
-        this.backEndBoard[this.numberSquare5 + 1].p === 1
+        this.backEndBoard[this.numberSquare5 + 1].l
       ) {
         this.boardSquaresFrontEnd[
           this.numberSquare5 + 1
         ].style.backgroundColor = this.player2Color;
-        this.backEndBoard[this.numberSquare5 + 1].p = 2;
-        this.player2PointsCounter++;
-        this.player1PointsCounter--;
-        this.player1Points.innerText = this.player1PointsCounter;
-        this.player2Points.innerText = this.player2PointsCounter;
       }
       if (
         this.backEndBoard[this.numberSquare5].d >
-          this.backEndBoard[this.numberSquare5 + 5].t &&
-        this.backEndBoard[this.numberSquare5 + 5].p === 1
+        this.backEndBoard[this.numberSquare5 + 5].t
       ) {
         this.boardSquaresFrontEnd[
           this.numberSquare5 + 5
         ].style.backgroundColor = this.player2Color;
-        this.backEndBoard[this.numberSquare5 + 5].p = 2;
-        this.player2PointsCounter++;
-        this.player1PointsCounter--;
-        this.player1Points.innerText = this.player1PointsCounter;
-        this.player2Points.innerText = this.player2PointsCounter;
       }
       if (
         this.backEndBoard[this.numberSquare5].l >
-          this.backEndBoard[this.numberSquare5 - 1].r &&
-        this.backEndBoard[this.numberSquare5 - 1].p === 1
+        this.backEndBoard[this.numberSquare5 - 1].r
       ) {
         this.boardSquaresFrontEnd[
           this.numberSquare5 - 1
         ].style.backgroundColor = this.player2Color;
-        this.backEndBoard[this.numberSquare5 - 1].p = 2;
-        this.player2PointsCounter++;
-        this.player1PointsCounter--;
-        this.player1Points.innerText = this.player1PointsCounter;
-        this.player2Points.innerText = this.player2PointsCounter;
       }
       this.counter++;
     }, this.interval * 13);
@@ -552,60 +480,36 @@ class Game {
       this.boardSquaresFrontEnd[this.numberSquare6].style.backgroundColor =
         this.player1Color;
       if (
-        this.backEndBoard[this.numberSquare3].t >
-          this.backEndBoard[this.numberSquare3 - 5].d &&
-        this.backEndBoard[this.numberSquare3 - 5].p === 2
+        this.backEndBoard[this.numberSquare6].t >
+        this.backEndBoard[this.numberSquare6 - 5].d
       ) {
         this.boardSquaresFrontEnd[
-          this.numberSquare3 - 5
+          this.numberSquare6 - 5
         ].style.backgroundColor = this.player1Color;
-        this.backEndBoard[this.numberSquare3 - 5].p = 1;
-        this.player1PointsCounter++;
-        this.player2PointsCounter--;
-        this.player1Points.innerText = this.player1PointsCounter;
-        this.player2Points.innerText = this.player2PointsCounter;
       }
       if (
-        this.backEndBoard[this.numberSquare3].r >
-          this.backEndBoard[this.numberSquare3 + 1].l &&
-        this.backEndBoard[this.numberSquare3 + 1].p === 2
+        this.backEndBoard[this.numberSquare6].r >
+        this.backEndBoard[this.numberSquare6 + 1].l
       ) {
         this.boardSquaresFrontEnd[
-          this.numberSquare3 + 1
+          this.numberSquare6 + 1
         ].style.backgroundColor = this.player1Color;
-        this.backEndBoard[this.numberSquare3 + 1].p = 1;
-        this.player1PointsCounter++;
-        this.player2PointsCounter--;
-        this.player1Points.innerText = this.player1PointsCounter;
-        this.player2Points.innerText = this.player2PointsCounter;
       }
       if (
-        this.backEndBoard[this.numberSquare3].d >
-          this.backEndBoard[this.numberSquare3 + 5].t &&
-        this.backEndBoard[this.numberSquare3 + 5].p === 2
+        this.backEndBoard[this.numberSquare6].d >
+        this.backEndBoard[this.numberSquare6 + 5].t
       ) {
         this.boardSquaresFrontEnd[
-          this.numberSquare3 + 5
+          this.numberSquare6 + 5
         ].style.backgroundColor = this.player1Color;
-        this.backEndBoard[this.numberSquare3 + 5].p = 1;
-        this.player1PointsCounter++;
-        this.player2PointsCounter--;
-        this.player1Points.innerText = this.player1PointsCounter;
-        this.player2Points.innerText = this.player2PointsCounter;
       }
       if (
-        this.backEndBoard[this.numberSquare3].l >
-          this.backEndBoard[this.numberSquare3 - 1].r &&
-        this.backEndBoard[this.numberSquare3 - 1].p === 2
+        this.backEndBoard[this.numberSquare6].l >
+        this.backEndBoard[this.numberSquare6 - 1].r
       ) {
         this.boardSquaresFrontEnd[
-          this.numberSquare3 - 1
+          this.numberSquare6 - 1
         ].style.backgroundColor = this.player1Color;
-        this.backEndBoard[this.numberSquare3 - 1].p = 1;
-        this.player1PointsCounter++;
-        this.player2PointsCounter--;
-        this.player1Points.innerText = this.player1PointsCounter;
-        this.player2Points.innerText = this.player2PointsCounter;
       }
       this.counter++;
     }, this.interval * 15);
@@ -637,59 +541,35 @@ class Game {
         this.player2Color;
       if (
         this.backEndBoard[this.numberSquare7].t >
-          this.backEndBoard[this.numberSquare7 - 5].d &&
-        this.backEndBoard[this.numberSquare7 - 5].p === 1
+        this.backEndBoard[this.numberSquare7 - 5].d
       ) {
         this.boardSquaresFrontEnd[
           this.numberSquare7 - 5
         ].style.backgroundColor = this.player2Color;
-        this.backEndBoard[this.numberSquare7 - 5].p = 2;
-        this.player2PointsCounter++;
-        this.player1PointsCounter--;
-        this.player1Points.innerText = this.player1PointsCounter;
-        this.player2Points.innerText = this.player2PointsCounter;
       }
       if (
         this.backEndBoard[this.numberSquare7].r >
-          this.backEndBoard[this.numberSquare7 + 1].l &&
-        this.backEndBoard[this.numberSquare7 + 1].p === 1
+        this.backEndBoard[this.numberSquare7 + 1].l
       ) {
         this.boardSquaresFrontEnd[
           this.numberSquare7 + 1
         ].style.backgroundColor = this.player2Color;
-        this.backEndBoard[this.numberSquare7 + 1].p = 2;
-        this.player2PointsCounter++;
-        this.player1PointsCounter--;
-        this.player1Points.innerText = this.player1PointsCounter;
-        this.player2Points.innerText = this.player2PointsCounter;
       }
       if (
         this.backEndBoard[this.numberSquare7].d >
-          this.backEndBoard[this.numberSquare7 + 5].t &&
-        this.backEndBoard[this.numberSquare7 + 5].p === 1
+        this.backEndBoard[this.numberSquare7 + 5].t
       ) {
         this.boardSquaresFrontEnd[
           this.numberSquare7 + 5
         ].style.backgroundColor = this.player2Color;
-        this.backEndBoard[this.numberSquare7 + 5].p = 2;
-        this.player2PointsCounter++;
-        this.player1PointsCounter--;
-        this.player1Points.innerText = this.player1PointsCounter;
-        this.player2Points.innerText = this.player2PointsCounter;
       }
       if (
         this.backEndBoard[this.numberSquare7].l >
-          this.backEndBoard[this.numberSquare7 - 1].r &&
-        this.backEndBoard[this.numberSquare7 - 1].p === 1
+        this.backEndBoard[this.numberSquare7 - 1].r
       ) {
         this.boardSquaresFrontEnd[
           this.numberSquare7 - 1
         ].style.backgroundColor = this.player2Color;
-        this.backEndBoard[this.numberSquare7 - 1].p = 2;
-        this.player2PointsCounter++;
-        this.player1PointsCounter--;
-        this.player1Points.innerText = this.player1PointsCounter;
-        this.player2Points.innerText = this.player2PointsCounter;
       }
       this.counter++;
     }, this.interval * 17);
@@ -723,60 +603,36 @@ class Game {
         this.player1Color;
       this.counter++;
       if (
-        this.backEndBoard[this.numberSquare3].t >
-          this.backEndBoard[this.numberSquare3 - 5].d &&
-        this.backEndBoard[this.numberSquare3 - 5].p === 2
+        this.backEndBoard[this.numberSquare8].t >
+        this.backEndBoard[this.numberSquare8 - 5].d
       ) {
         this.boardSquaresFrontEnd[
-          this.numberSquare3 - 5
+          this.numberSquare8 - 5
         ].style.backgroundColor = this.player1Color;
-        this.backEndBoard[this.numberSquare3 - 5].p = 1;
-        this.player1PointsCounter++;
-        this.player2PointsCounter--;
-        this.player1Points.innerText = this.player1PointsCounter;
-        this.player2Points.innerText = this.player2PointsCounter;
       }
       if (
-        this.backEndBoard[this.numberSquare3].r >
-          this.backEndBoard[this.numberSquare3 + 1].l &&
-        this.backEndBoard[this.numberSquare3 + 1].p === 2
+        this.backEndBoard[this.numberSquare8].r >
+        this.backEndBoard[this.numberSquare8 + 1].l
       ) {
         this.boardSquaresFrontEnd[
-          this.numberSquare3 + 1
+          this.numberSquare8 + 1
         ].style.backgroundColor = this.player1Color;
-        this.backEndBoard[this.numberSquare3 + 1].p = 1;
-        this.player1PointsCounter++;
-        this.player2PointsCounter--;
-        this.player1Points.innerText = this.player1PointsCounter;
-        this.player2Points.innerText = this.player2PointsCounter;
       }
       if (
-        this.backEndBoard[this.numberSquare3].d >
-          this.backEndBoard[this.numberSquare3 + 5].t &&
-        this.backEndBoard[this.numberSquare3 + 5].p === 2
+        this.backEndBoard[this.numberSquare8].d >
+        this.backEndBoard[this.numberSquare8 + 5].t
       ) {
         this.boardSquaresFrontEnd[
-          this.numberSquare3 + 5
+          this.numberSquare8 + 5
         ].style.backgroundColor = this.player1Color;
-        this.backEndBoard[this.numberSquare3 + 5].p = 1;
-        this.player1PointsCounter++;
-        this.player2PointsCounter--;
-        this.player1Points.innerText = this.player1PointsCounter;
-        this.player2Points.innerText = this.player2PointsCounter;
       }
       if (
-        this.backEndBoard[this.numberSquare3].l >
-          this.backEndBoard[this.numberSquare3 - 1].r &&
-        this.backEndBoard[this.numberSquare3 - 1].p === 2
+        this.backEndBoard[this.numberSquare8].l >
+        this.backEndBoard[this.numberSquare8 - 1].r
       ) {
         this.boardSquaresFrontEnd[
-          this.numberSquare3 - 1
+          this.numberSquare8 - 1
         ].style.backgroundColor = this.player1Color;
-        this.backEndBoard[this.numberSquare3 - 1].p = 1;
-        this.player1PointsCounter++;
-        this.player2PointsCounter--;
-        this.player1Points.innerText = this.player1PointsCounter;
-        this.player2Points.innerText = this.player2PointsCounter;
       }
     }, this.interval * 19);
     ///////////////  player 2   ////////////////////////////
@@ -808,59 +664,35 @@ class Game {
         this.player2Color;
       if (
         this.backEndBoard[this.numberSquare9].t >
-          this.backEndBoard[this.numberSquare9 - 5].d &&
-        this.backEndBoard[this.numberSquare9 - 5].p === 1
+        this.backEndBoard[this.numberSquare9 - 5].d
       ) {
         this.boardSquaresFrontEnd[
           this.numberSquare9 - 5
         ].style.backgroundColor = this.player2Color;
-        this.backEndBoard[this.numberSquare9 - 5].p = 2;
-        this.player2PointsCounter++;
-        this.player1PointsCounter--;
-        this.player1Points.innerText = this.player1PointsCounter;
-        this.player2Points.innerText = this.player2PointsCounter;
       }
       if (
         this.backEndBoard[this.numberSquare9].r >
-          this.backEndBoard[this.numberSquare9 + 1].l &&
-        this.backEndBoard[this.numberSquare9 + 1].p === 1
+        this.backEndBoard[this.numberSquare9 + 1].l
       ) {
         this.boardSquaresFrontEnd[
           this.numberSquare9 + 1
         ].style.backgroundColor = this.player2Color;
-        this.backEndBoard[this.numberSquare9 + 1].p = 2;
-        this.player2PointsCounter++;
-        this.player1PointsCounter--;
-        this.player1Points.innerText = this.player1PointsCounter;
-        this.player2Points.innerText = this.player2PointsCounter;
       }
       if (
         this.backEndBoard[this.numberSquare9].d >
-          this.backEndBoard[this.numberSquare9 + 5].t &&
-        this.backEndBoard[this.numberSquare9 + 5].p === 1
+        this.backEndBoard[this.numberSquare9 + 5].t
       ) {
         this.boardSquaresFrontEnd[
           this.numberSquare9 + 5
         ].style.backgroundColor = this.player2Color;
-        this.backEndBoard[this.numberSquare9 + 5].p = 2;
-        this.player2PointsCounter++;
-        this.player1PointsCounter--;
-        this.player1Points.innerText = this.player1PointsCounter;
-        this.player2Points.innerText = this.player2PointsCounter;
       }
       if (
         this.backEndBoard[this.numberSquare9].l >
-          this.backEndBoard[this.numberSquare9 - 1].r &&
-        this.backEndBoard[this.numberSquare9 - 1].p === 1
+        this.backEndBoard[this.numberSquare9 - 1].r
       ) {
         this.boardSquaresFrontEnd[
           this.numberSquare9 - 1
         ].style.backgroundColor = this.player2Color;
-        this.backEndBoard[this.numberSquare9 - 1].p = 2;
-        this.player2PointsCounter++;
-        this.player1PointsCounter--;
-        this.player1Points.innerText = this.player1PointsCounter;
-        this.player2Points.innerText = this.player2PointsCounter;
       }
       this.counter++;
     }, this.interval * 21);
@@ -893,60 +725,36 @@ class Game {
       this.boardSquaresFrontEnd[this.numberSquare10].style.backgroundColor =
         this.player1Color;
       if (
-        this.backEndBoard[this.numberSquare3].t >
-          this.backEndBoard[this.numberSquare3 - 5].d &&
-        this.backEndBoard[this.numberSquare3 - 5].p === 2
+        this.backEndBoard[this.numberSquare10].t >
+        this.backEndBoard[this.numberSquare10 - 5].d
       ) {
         this.boardSquaresFrontEnd[
-          this.numberSquare3 - 5
+          this.numberSquare10 - 5
         ].style.backgroundColor = this.player1Color;
-        this.backEndBoard[this.numberSquare3 - 5].p = 1;
-        this.player1PointsCounter++;
-        this.player2PointsCounter--;
-        this.player1Points.innerText = this.player1PointsCounter;
-        this.player2Points.innerText = this.player2PointsCounter;
       }
       if (
-        this.backEndBoard[this.numberSquare3].r >
-          this.backEndBoard[this.numberSquare3 + 1].l &&
-        this.backEndBoard[this.numberSquare3 + 1].p === 2
+        this.backEndBoard[this.numberSquare10].r >
+        this.backEndBoard[this.numberSquare10 + 1].l
       ) {
         this.boardSquaresFrontEnd[
-          this.numberSquare3 + 1
+          this.numberSquare10 + 1
         ].style.backgroundColor = this.player1Color;
-        this.backEndBoard[this.numberSquare3 + 1].p = 1;
-        this.player1PointsCounter++;
-        this.player2PointsCounter--;
-        this.player1Points.innerText = this.player1PointsCounter;
-        this.player2Points.innerText = this.player2PointsCounter;
       }
       if (
-        this.backEndBoard[this.numberSquare3].d >
-          this.backEndBoard[this.numberSquare3 + 5].t &&
-        this.backEndBoard[this.numberSquare3 + 5].p === 2
+        this.backEndBoard[this.numberSquare10].d >
+        this.backEndBoard[this.numberSquare10 + 5].t
       ) {
         this.boardSquaresFrontEnd[
-          this.numberSquare3 + 5
+          this.numberSquare10 + 5
         ].style.backgroundColor = this.player1Color;
-        this.backEndBoard[this.numberSquare3 + 5].p = 1;
-        this.player1PointsCounter++;
-        this.player2PointsCounter--;
-        this.player1Points.innerText = this.player1PointsCounter;
-        this.player2Points.innerText = this.player2PointsCounter;
       }
       if (
-        this.backEndBoard[this.numberSquare3].l >
-          this.backEndBoard[this.numberSquare3 - 1].r &&
-        this.backEndBoard[this.numberSquare3 - 1].p === 2
+        this.backEndBoard[this.numberSquare10].l >
+        this.backEndBoard[this.numberSquare10 - 1].r
       ) {
         this.boardSquaresFrontEnd[
-          this.numberSquare3 - 1
+          this.numberSquare10 - 1
         ].style.backgroundColor = this.player1Color;
-        this.backEndBoard[this.numberSquare3 - 1].p = 1;
-        this.player1PointsCounter++;
-        this.player2PointsCounter--;
-        this.player1Points.innerText = this.player1PointsCounter;
-        this.player2Points.innerText = this.player2PointsCounter;
       }
       this.counter++;
     }, this.interval * 23);

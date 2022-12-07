@@ -28,9 +28,18 @@ a{
     position: relative; 
 }
 
+.back-to-main-button:hover{
+    color: #000;
+}
+
 .buttons-ul{
     display: flex;
     list-style-type: none;
+}
+.overview-text-aside {
+    position: relative;
+    left: 15vw;
+    width: 65%;
 }
 
 .overview-background{
@@ -42,7 +51,7 @@ a{
 }
 
 .overview-text{
-    font-size: 2vw;
+    font-size: 1.8vw;
     text-align: center;
     width: 83vw;
 }
@@ -69,4 +78,8 @@ a{
     color: black;
     padding: 1vw;
     position: relative;
+}
+
+.quick-game-button:hover{
+    color: #880808;
 }

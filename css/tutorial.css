@@ -32,17 +32,17 @@ li {
 
 
 
-.instruction{
-    font-size: 1vw;
+.instruction li{
+    font-size: 1.1vw;
     list-style-type: none;
     position: relative;
-    top: 2.7vw;
-    width: 76%;
+    top: 4vw;
+    width: 77%;
     z-index: 2;
 }
 
 .instructions {
-    font-size: 5vw;
+    font-size: 3vw;
     list-style-type: none;
     margin: 0.5vw 0 0 0.7vw;
     position: relative;
@@ -100,3 +100,44 @@ li {
     width: 23vw;
 }
 
+
+.buttons-ul{
+    display: flex;
+    list-style-type: none;
+    bottom: 0.2vw;
+    right: 3vw;
+    position: absolute;
+
+}
+
+.back-to-main-button {
+    background-color: #880808;
+    border-color: white;
+    border-radius: 5%;
+    bottom: 3vw;
+    padding: 1vw;
+    position: relative;
+}
+
+.back-to-main-button:hover{
+    color: #000;
+}
+
+
+.quick-game-button {
+    background-color: white;
+    border-color: gray;
+    bottom: 3vw;
+    border-radius: 5%;
+    color: black;
+    padding: 1vw;
+    position: relative;
+    z-index: 5;
+}
+
+a {
+    color: white;
+    font-size: 1.5vw;
+    margin: 0 2vw;
+    text-decoration: none;
+}

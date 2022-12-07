@@ -208,7 +208,8 @@ class Game {
 
     this.player1Token.style.backgroundColor = this.inactiveColor;
     this.player2Token.style.backgroundColor = this.inactiveColor;
-    this.interval = 4000;
+    const interval = prompt("set time (in seconds)");
+    this.interval = interval * 1000;
     setTimeout(() => {
       const player1sName = prompt("Enter your name: player1");
       this.player1sNameDisplay.innerText = player1sName;
@@ -723,56 +724,56 @@ class Game {
         this.player1Color;
       this.counter++;
       if (
-        this.backEndBoard[this.numberSquare3].t >
-          this.backEndBoard[this.numberSquare3 - 5].d &&
-        this.backEndBoard[this.numberSquare3 - 5].p === 2
+        this.backEndBoard[this.numberSquare8].t >
+          this.backEndBoard[this.numberSquare8 - 5].d &&
+        this.backEndBoard[this.numberSquare8 - 5].p === 2
       ) {
         this.boardSquaresFrontEnd[
-          this.numberSquare3 - 5
+          this.numberSquare8 - 5
         ].style.backgroundColor = this.player1Color;
-        this.backEndBoard[this.numberSquare3 - 5].p = 1;
+        this.backEndBoard[this.numberSquare8 - 5].p = 1;
         this.player1PointsCounter++;
         this.player2PointsCounter--;
         this.player1Points.innerText = this.player1PointsCounter;
         this.player2Points.innerText = this.player2PointsCounter;
       }
       if (
-        this.backEndBoard[this.numberSquare3].r >
-          this.backEndBoard[this.numberSquare3 + 1].l &&
-        this.backEndBoard[this.numberSquare3 + 1].p === 2
+        this.backEndBoard[this.numberSquare8].r >
+          this.backEndBoard[this.numberSquare8 + 1].l &&
+        this.backEndBoard[this.numberSquare8 + 1].p === 2
       ) {
         this.boardSquaresFrontEnd[
-          this.numberSquare3 + 1
+          this.numberSquare8 + 1
         ].style.backgroundColor = this.player1Color;
-        this.backEndBoard[this.numberSquare3 + 1].p = 1;
+        this.backEndBoard[this.numberSquare8 + 1].p = 1;
         this.player1PointsCounter++;
         this.player2PointsCounter--;
         this.player1Points.innerText = this.player1PointsCounter;
         this.player2Points.innerText = this.player2PointsCounter;
       }
       if (
-        this.backEndBoard[this.numberSquare3].d >
-          this.backEndBoard[this.numberSquare3 + 5].t &&
-        this.backEndBoard[this.numberSquare3 + 5].p === 2
+        this.backEndBoard[this.numberSquare8].d >
+          this.backEndBoard[this.numberSquare8 + 5].t &&
+        this.backEndBoard[this.numberSquare8 + 5].p === 2
       ) {
         this.boardSquaresFrontEnd[
-          this.numberSquare3 + 5
+          this.numberSquare8 + 5
         ].style.backgroundColor = this.player1Color;
-        this.backEndBoard[this.numberSquare3 + 5].p = 1;
+        this.backEndBoard[this.numberSquare8 + 5].p = 1;
         this.player1PointsCounter++;
         this.player2PointsCounter--;
         this.player1Points.innerText = this.player1PointsCounter;
         this.player2Points.innerText = this.player2PointsCounter;
       }
       if (
-        this.backEndBoard[this.numberSquare3].l >
-          this.backEndBoard[this.numberSquare3 - 1].r &&
-        this.backEndBoard[this.numberSquare3 - 1].p === 2
+        this.backEndBoard[this.numberSquare8].l >
+          this.backEndBoard[this.numberSquare8 - 1].r &&
+        this.backEndBoard[this.numberSquare8 - 1].p === 2
       ) {
         this.boardSquaresFrontEnd[
-          this.numberSquare3 - 1
+          this.numberSquare8 - 1
         ].style.backgroundColor = this.player1Color;
-        this.backEndBoard[this.numberSquare3 - 1].p = 1;
+        this.backEndBoard[this.numberSquare8 - 1].p = 1;
         this.player1PointsCounter++;
         this.player2PointsCounter--;
         this.player1Points.innerText = this.player1PointsCounter;
@@ -870,7 +871,7 @@ class Game {
     setTimeout(() => {
       this.player1Token.style.backgroundColor = this.player1Color;
       this.player2Token.style.backgroundColor = this.inactiveColor;
-    }, this.interval * 22);
+    }, this.interval * 23);
 
     setTimeout(() => {
       this.player1FirstMoveCard = prompt("Last card Player one");
@@ -893,69 +894,69 @@ class Game {
       this.boardSquaresFrontEnd[this.numberSquare10].style.backgroundColor =
         this.player1Color;
       if (
-        this.backEndBoard[this.numberSquare3].t >
-          this.backEndBoard[this.numberSquare3 - 5].d &&
-        this.backEndBoard[this.numberSquare3 - 5].p === 2
+        this.backEndBoard[this.numberSquare10].t >
+          this.backEndBoard[this.numberSquare10 - 5].d &&
+        this.backEndBoard[this.numberSquare10 - 5].p === 2
       ) {
         this.boardSquaresFrontEnd[
-          this.numberSquare3 - 5
+          this.numberSquare10 - 5
         ].style.backgroundColor = this.player1Color;
-        this.backEndBoard[this.numberSquare3 - 5].p = 1;
+        this.backEndBoard[this.numberSquare10 - 5].p = 1;
         this.player1PointsCounter++;
         this.player2PointsCounter--;
         this.player1Points.innerText = this.player1PointsCounter;
         this.player2Points.innerText = this.player2PointsCounter;
       }
       if (
-        this.backEndBoard[this.numberSquare3].r >
-          this.backEndBoard[this.numberSquare3 + 1].l &&
-        this.backEndBoard[this.numberSquare3 + 1].p === 2
+        this.backEndBoard[this.numberSquare10].r >
+          this.backEndBoard[this.numberSquare10 + 1].l &&
+        this.backEndBoard[this.numberSquare10 + 1].p === 2
       ) {
         this.boardSquaresFrontEnd[
-          this.numberSquare3 + 1
+          this.numberSquare10 + 1
         ].style.backgroundColor = this.player1Color;
-        this.backEndBoard[this.numberSquare3 + 1].p = 1;
+        this.backEndBoard[this.numberSquare10 + 1].p = 1;
         this.player1PointsCounter++;
         this.player2PointsCounter--;
         this.player1Points.innerText = this.player1PointsCounter;
         this.player2Points.innerText = this.player2PointsCounter;
       }
       if (
-        this.backEndBoard[this.numberSquare3].d >
-          this.backEndBoard[this.numberSquare3 + 5].t &&
-        this.backEndBoard[this.numberSquare3 + 5].p === 2
+        this.backEndBoard[this.numberSquare10].d >
+          this.backEndBoard[this.numberSquare10 + 5].t &&
+        this.backEndBoard[this.numberSquare10 + 5].p === 2
       ) {
         this.boardSquaresFrontEnd[
-          this.numberSquare3 + 5
+          this.numberSquare10 + 5
         ].style.backgroundColor = this.player1Color;
-        this.backEndBoard[this.numberSquare3 + 5].p = 1;
+        this.backEndBoard[this.numberSquare10 + 5].p = 1;
         this.player1PointsCounter++;
         this.player2PointsCounter--;
         this.player1Points.innerText = this.player1PointsCounter;
         this.player2Points.innerText = this.player2PointsCounter;
       }
       if (
-        this.backEndBoard[this.numberSquare3].l >
-          this.backEndBoard[this.numberSquare3 - 1].r &&
-        this.backEndBoard[this.numberSquare3 - 1].p === 2
+        this.backEndBoard[this.numberSquare10].l >
+          this.backEndBoard[this.numberSquare10 - 1].r &&
+        this.backEndBoard[this.numberSquare10 - 1].p === 2
       ) {
         this.boardSquaresFrontEnd[
-          this.numberSquare3 - 1
+          this.numberSquare10 - 1
         ].style.backgroundColor = this.player1Color;
-        this.backEndBoard[this.numberSquare3 - 1].p = 1;
+        this.backEndBoard[this.numberSquare10 - 1].p = 1;
         this.player1PointsCounter++;
         this.player2PointsCounter--;
         this.player1Points.innerText = this.player1PointsCounter;
         this.player2Points.innerText = this.player2PointsCounter;
       }
       this.counter++;
-    }, this.interval * 23);
+    }, this.interval * 25);
     console.log(this.backEndBoard);
 
     setTimeout(() => {
       this.player1Token.style.backgroundColor = this.inactiveColor;
       this.player2Token.style.backgroundColor = this.inactiveColor;
-    }, this.interval * 24);
+    }, this.interval * 27);
   }
 }
 const game = new Game();

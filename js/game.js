@@ -208,8 +208,8 @@ class Game {
 
     this.player1Token.style.backgroundColor = this.inactiveColor;
     this.player2Token.style.backgroundColor = this.inactiveColor;
-    const interval = prompt("set time (in seconds)");
-    this.interval = interval * 1000;
+    //const interval = prompt("set time (in seconds)");
+    this.interval = 6000;
     setTimeout(() => {
       const player1sName = prompt("Enter your name: player1");
       this.player1sNameDisplay.innerText = player1sName;

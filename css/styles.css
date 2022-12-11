@@ -1,4 +1,4 @@
-body{
+body {
     background-color: #000;
     color: #fff;
     display: flex;
@@ -19,7 +19,7 @@ h1 {
     padding: 0;
 }
 
-.footer-aside{
+.footer-aside {
     font-size: 1vw;
 }
 
@@ -90,7 +90,7 @@ h1 {
     font-size: 2vw;
 }
 
-.quick-start-button{
+.quick-start-button {
     align-self: center;
     color: rgb(100, 98, 98);
     font-size: 2.5vw;
@@ -100,15 +100,16 @@ h1 {
     top: -14vw;
     width: 15vw;
 }
-.quick-start-button:hover{
+
+.quick-start-button:hover {
     color: #FFF5EE;
     text-decoration: none;
 }
 
-#index-page{
+#index-page {
     align-items: center;
     background-color: pink;
-    display:flex;  
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
@@ -125,7 +126,7 @@ h1 {
     text-align: center;
 }
 
-.footer-aside{
+.footer-aside {
     bottom: 2vw;
     position: relative;
 }

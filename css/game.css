@@ -1,178 +1,109 @@
-body{
-    align-items: center;
-    background-color: black;
-    color: bisque;
-    display: flex;
-    height: 40vw;
-    justify-content: space-around;
+body {
+    background-color: #000;
     margin: 0;
-    opacity:0.85;
     padding: 0;
     width: 100vw;
+    height: 40vw;
 }
 
-
-
-.card-values{
-    color: black;
-    border: 1px dashed #880808;
-    border-radius: 50%;
-    font-size: 2vw;
-    height: 25%;
-    position: absolute;
-    width: 20%;
+img {
+    width: 30px;
+    height: 20px
 }
 
-.card-value-top{
-   right: 40%;
-   
-}
-
-.card-value-right{
-    right: 0;
-    top: 40%;
-}
-
-.card-value-bottom{
-    bottom: 0;
-    right: 40%;
-}
-
-.card-value-left{
-    left: 0;
-    top: 40%;
-}
-
-.cell{
-    border: 0.1px dashed #880808;
-    border-radius: 5%;
-    height: 120%;
-    position: relative;
-    width: 120%;
-}
-
-.deck{
-    font-size: 1.6vw;
-}
-
-.square-numbers{
-    color: #000;
-    font-size: 2vw;
-    position: absolute;
-    right: 47%;
-    top: 40%;
-}
-
-.the-players{
-    text-align: center;
-}
-
-#abandon-button{
-    color:#880808;
-    font-size: 2vw;
-    margin: 3vw 0 0 1vw;
-    padding: 0;
+a {
+    color: #fff;
     text-decoration: none;
 }
 
-#abandon-button:hover{
-    opacity: 0.9;
+.board-squares {
+    background-position-y: 1vw;
+    border: 0.1px dashed #880808;
+    height: 32%;
+    width: 32%;
 }
 
-#action-button1, #action-button2{
-    font-size: 1.25vw;
+.chosen-card {
+    height: 6vw;
+    width: 10vw;
 }
 
-#board{
+.player-active-tokens {
+    background-color: #000;
+    border-radius: 50%;
+    height: 2vw;
+    left: 3vw;
+    position: relative;
+    width: 2vw
+}
+
+.players-cards {
     align-items: center;
-    background-color: bisque;
-    border-radius: 5%;
+    background-color: white;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 0.1px solid black;
     display: flex;
-    flex-wrap: wrap;
-    height: 30vw;
-    justify-content: center;
-    margin-top: 10vw;
+    height: 6vw;
     position: relative;
-    width: 50vw;
+    width: 10vw;
 }
 
-#board-area{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 2vw;
-    text-align: center;
+.player1s-cards {
+    background-color: lightblue;
 }
 
-#one, #two, #three, #four, #five, #six, #seven, #eight, #nine{
-    height: 30%;
-    width: 30%;
-}
-#player1-hand{
-    width: 100%
+.player2s-cards {
+    background-color: lightcoral;
 }
 
-
-#player1-name{
-    font-size: 2.5vw;
+.players-name {
+    color: #fff;
+    font-size: 2.2vw;
+    margin-bottom: 2vw;
 }
 
-#player2-name{
-    font-size: 2.5vw;
-}
-
-
-#player1-points, #player2-points{
+.players-points {
+    color: #fff;
     font-size: 3vw;
 }
 
-#player1-status, #player2-status{
-    font-size: 2vw;
-}
-
-#player1-token {
-    border-radius: 50%;
-    height: 4vw;
-    width:4vw;
-}
-
-#player2-token {
-    border-radius: 50%;
-    height: 4vw;
-    width: 4vw;
-}
-
-#restart-button {
-    color: rgb(234, 228, 228);
-    font-size: 2vw;
-    margin: 3vw 0 0 1vw;
-    opacity: 0.5;
-    padding: 0;
+.players-side {
+    bottom: 3vw;
+    height: 30vw;
     position: relative;
-    text-decoration: none;
+    text-align: center;
+    width: 10vw;
 }
 
-#player2{
-    text-align: right;
+#board {
+    background-color: antiquewhite;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 30vw;
+    margin-top: 5vw;
+    width: 40vw;
 }
 
-#restart-button:hover{
-    opacity: 0.4;
+#game-area {
+    display: flex;
+    justify-content: space-around;
 }
 
-#start-button1{
+#instructions {
+    color: #fff;
     font-size: 2vw;
+    margin-top: 3vw;
+    text-align: center;
 }
 
-#start-button1:hover{
-    color: rgb(143, 141, 141);
+#player1-chosen-card {
+    background-color: lightblue;
+    visibility: hidden;
 }
 
-#start-button2 {
-    font-size: 2vw;
+#player2-chosen-card {
+    background-color: lightcoral;
+    visibility: hidden;
 }
-
-#start-button2:hover {
-    color: rgb(42, 41, 41);
-}
-

@@ -5,7 +5,7 @@ const residentEvilCards = [
     bottom: 5,
     left: 7,
     player: 1,
-    image: "./images/albertWeskerCard.png",
+    image: "../images/albertWeskerCard.png",
   },
   {
     top: 4,
@@ -13,7 +13,7 @@ const residentEvilCards = [
     bottom: 3,
     left: 5,
     player: 1,
-    image: "./images/chrisRedfieldCard.png",
+    image: "../images/chrisRedfieldCard.png",
   },
   {
     top: 4,
@@ -21,7 +21,7 @@ const residentEvilCards = [
     bottom: 5,
     left: 3,
     player: 1,
-    image: "./images/jillValentineCard.png",
+    image: "../images/jillValentineCard.png",
   },
   {
     top: 1,
@@ -29,7 +29,7 @@ const residentEvilCards = [
     bottom: 9,
     left: 4,
     player: 1,
-    image: "./images/lickerCard.png",
+    image: "../images/lickerCard.png",
   },
   {
     top: 5,
@@ -37,7 +37,7 @@ const residentEvilCards = [
     bottom: 8,
     left: 7,
     player: 1,
-    image: "./images/chrisRedfieldCard2.png",
+    image: "../images/chrisRedfieldCard2.png",
   },
   {
     top: 9,
@@ -45,7 +45,7 @@ const residentEvilCards = [
     bottom: 7,
     left: 6,
     player: 1,
-    image: "./images/nemisisCard.png",
+    image: "../images/nemisisCard.png",
   },
 ];
 
@@ -56,7 +56,7 @@ const finalFantasyCards = [
     bottom: 6,
     left: 5,
     player: 2,
-    image: "./images/cloudCard.png",
+    image: "../images/cloudCard.png",
   },
   {
     top: 2,
@@ -64,7 +64,7 @@ const finalFantasyCards = [
     bottom: 9,
     left: 6,
     player: 2,
-    image: "./images/dragoonCard.png",
+    image: "../images/dragoonCard.png",
   },
   {
     top: 4,
@@ -72,7 +72,7 @@ const finalFantasyCards = [
     bottom: 5,
     left: 6,
     player: 2,
-    image: "./images/lightningCard.png",
+    image: "../images/lightningCard.png",
   },
   {
     top: 4,
@@ -80,7 +80,7 @@ const finalFantasyCards = [
     bottom: 7,
     left: 6,
     player: 2,
-    image: "./images/tidusCard.png",
+    image: "../images/tidusCard.png",
   },
   {
     top: 8,
@@ -88,7 +88,7 @@ const finalFantasyCards = [
     bottom: 7,
     left: 5,
     player: 2,
-    image: "./images/vincentCard.png",
+    image: "../images/vincentCard.png",
   },
   {
     top: 8,
@@ -96,7 +96,7 @@ const finalFantasyCards = [
     bottom: 7,
     left: 5,
     player: 2,
-    image: "./images/zidaneCard.png",
+    image: "../images/zidaneCard.png",
   },
 ];
 
@@ -505,8 +505,12 @@ class Players {
       if (this.player1PointsCounter > this.player2PointsCounter) {
         game.instructions.innerHTML =
           "<a href='/index.html'> Player 1 wins! Click here To start a new game!</a>";
-      } else {
-        ("<a href='/index.html'> Player 2 wins! Click here To start a new game!</a>");
+      } else if (this.player1PointsCounter < this.player2PointsCounter) {
+        game.instructions.innerHTML =
+          "<a href='/index.html'> Player 2 wins! Click here To start a new game!</a>";
+      } else if (this.player1Points === this.player2PointsCounter) {
+        game.instructions.innerHTML =
+          "<a href='/index.html'> It was a draw! Click here To start a new game!</a>";
       }
     }
   }
@@ -525,9 +529,13 @@ class Players {
       game.instructions.innerText = "";
       if (this.player1PointsCounter > this.player2PointsCounter) {
         game.instructions.innerHTML =
-          "<a href='/index.html'> Player 1 wins! Click here To start a new game!</a>";
+          "<a href='./index.html'> Player 1 wins! Click here To start a new game!</a>";
+      } else if (this.player1PointsCounter < this.player2sPointsCounter) {
+        game.imstructions.innerHTML =
+          "<a href='./index.html'> Player 2 wins! Click here To start a new game!</a>";
       } else {
-        ("<a href='/index.html'> Player 2 wins! Click here To start a new game!</a>");
+        game.instructions.innerHTML =
+          "<a href='-/index.html'> It was a draw! Click here To start a new game!</a>";
       }
     }
   }
@@ -663,6 +671,8 @@ class Players {
             this.player1Points.innerText = this.player1PointsCounter;
             this.player2Points.innerText = this.player2PointsCounter;
           }
+          game.player1ActiveToken.style.backgroundColor = "gray";
+          game.player2ActiveToken.style.backgroundColor = "green";
           this.player2Active();
         }
       });
@@ -736,6 +746,8 @@ class Players {
             this.player1Points.innerText = this.player1PointsCounter;
             this.player2Points.innerText = this.player2PointsCounter;
           }
+          game.player1ActiveToken.style.backgroundColor = "gray";
+          game.player2ActiveToken.style.backgroundColor = "green";
           this.player2Active();
         }
       });
@@ -810,6 +822,8 @@ class Players {
             this.player1Points.innerText = this.player1PointsCounter;
             this.player2Points.innerText = this.player2PointsCounter;
           }
+          game.player1ActiveToken.style.backgroundColor = "gray";
+          game.player2ActiveToken.style.backgroundColor = "green";
 
           this.player2Active();
         }
@@ -907,6 +921,8 @@ class Players {
             this.player1Points.innerText = this.player1PointsCounter;
             this.player2Points.innerText = this.player2PointsCounter;
           }
+          game.player2ActiveToken.style.backgroundColor = "gray";
+          game.player1ActiveToken.style.backgroundColor = "green";
           this.player1Active();
         }
       });
@@ -981,7 +997,8 @@ class Players {
             this.player1Points.innerText = this.player1PointsCounter;
             this.player2Points.innerText = this.player2PointsCounter;
           }
-
+          game.player2ActiveToken.style.backgroundColor = "gray";
+          game.player1ActiveToken.style.backgroundColor = "green";
           this.player1Active();
         }
       });
@@ -1056,6 +1073,8 @@ class Players {
             this.player1Points.innerText = this.player1PointsCounter;
             this.player2Points.innerText = this.player2PointsCounter;
           }
+          game.player2ActiveToken.style.backgroundColor = "gray";
+          game.player1ActiveToken.style.backgroundColor = "green";
 
           this.player1Active();
         }

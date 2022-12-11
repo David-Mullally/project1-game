@@ -505,15 +505,15 @@ class Players {
       game.instructions.innerText = "";
       if (this.player1PointsCounter > this.player2PointsCounter) {
         game.instructions.innerHTML =
-          "<a href='./index.html'> Player 1 wins! Click here To start a new game!</a>";
+          "<a href='../index.html'> Player 1 wins! Click here To start a new game!</a>";
       }
       if (this.player1PointsCounter < this.player2PointsCounter) {
         game.instructions.innerHTML =
-          "<a href='./index.html'> Player 2 wins! Click here To start a new game!</a>";
+          "<a href='../index.html'> Player 2 wins! Click here To start a new game!</a>";
       }
       if (this.player1PointsCounter === this.player2PointsCounter) {
         game.instructions.innerHTML =
-          "<a href='./index.html'> It was a draw! Click here To start a new game!</a>";
+          "<a href='../index.html'> It was a draw! Click here To start a new game!</a>";
       }
     }
   }
@@ -532,15 +532,15 @@ class Players {
       game.instructions.innerText = "Game over!";
       if (this.player1PointsCounter > this.player2PointsCounter) {
         game.instructions.innerHTML =
-          "<a href='./index.html'> Player 1 wins! Click here To start a new game!</a>";
+          "<a href='../index.html'> Player 1 wins! Click here To start a new game!</a>";
       }
       if (this.player1PointsCounter < this.player2PointsCounter) {
         game.instructions.innerHTML =
-          "<a href='./index.html'> Player 2 wins! Click here To start a new game!</a>";
+          "<a href='../index.html'> Player 2 wins! Click here To start a new game!</a>";
       }
       if (this.player1PointsCounter === this.player2PointsCounter) {
         game.instructions.innerHTML =
-          "<a href='./index.html'> It was a draw! Click here To start a new game!</a>";
+          "<a href='../index.html'> It was a draw! Click here To start a new game!</a>";
       }
     }
   }

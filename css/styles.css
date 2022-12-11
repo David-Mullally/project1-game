@@ -1,0 +1,125 @@
+body,
+html {
+    background-color: #000;
+    color: #fff;
+    font-family: "Montserrat";
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    margin: 3vw 3vw;
+}
+
+#lets-play{
+    color: #FFF5EE;
+    font-size: 2vw;
+    position: relative;
+    top: 23vw;
+    right: 30vw;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+    color: #3f3e3d;
+}
+
+
+.navbar-brand {
+    color: #FFF5EE;
+    font-size: 1vw;
+    top: 2vw;
+    position: relative;
+    bottom: 5vw;
+    right: 4vw;
+}
+.navbar-brand-logo {
+    border-radius: 100%;
+    width: 10vw;
+}
+
+.navbar-aside {
+    font-size: 1vw;
+}
+
+
+.title-card,
+.enter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title-card {
+    text-align: center;
+}
+
+.enter {
+    justify-content: left;
+}
+
+.title-card-title {
+    color: #880808;
+    font-family: "Creepster";
+    font-size: 15vw;
+    position: relative;
+    top: 6vw;
+    z-index: 1;
+}
+
+.title-card-logo {
+    left: 25vw;
+    position: relative;
+    top: 1vw;
+    width: 11vw;
+    z-index: 2;
+}
+
+.col {
+    text-align: center;
+}
+
+.overview-text {
+    font-size: 2vw;
+}
+
+#overview {
+    text-align: center;
+    width: 80%
+}
+
+#contacts {
+    padding-bottom: 3vw;
+    text-align: center;
+}
+
+.socials {
+    color: #880808;
+    font-size: 1vw;
+    position: relative;
+    bottom: 6vw;
+}
+
+.socials:hover {
+    color: #FFF5EE;
+}
+
+#dengocorp {
+    font-size: 1vw;
+    position: relative;
+    bottom: 8vw;
+    
+}
+
+#hows-my-coding{
+    font-size: 1vw;
+    position: relative;
+    top: 3vw;
+}

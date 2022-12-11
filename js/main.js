@@ -499,16 +499,19 @@ class Players {
       this.player2SquareChosen = true;
       this.player1AddEventListeners();
     } else {
+      game.instructions.innerText = "Game over!";
       game.player1ActiveToken.style.backgroundColor = "#000";
       game.player2ActiveToken.style.backgroundColor = "#000";
       game.instructions.innerText = "";
       if (this.player1PointsCounter > this.player2PointsCounter) {
         game.instructions.innerHTML =
           "<a href='./index.html'> Player 1 wins! Click here To start a new game!</a>";
-      } else if (this.player1PointsCounter < this.player2sPointsCounter) {
-        game.imstructions.innerHTML =
+      }
+      if (this.player1PointsCounter < this.player2PointsCounter) {
+        game.instructions.innerHTML =
           "<a href='./index.html'> Player 2 wins! Click here To start a new game!</a>";
-      } else {
+      }
+      if (this.player1PointsCounter === this.player2PointsCounter) {
         game.instructions.innerHTML =
           "<a href='./index.html'> It was a draw! Click here To start a new game!</a>";
       }
@@ -526,14 +529,16 @@ class Players {
     } else {
       game.player1ActiveToken.style.backgroundColor = "#000";
       game.player2ActiveToken.style.backgroundColor = "#000";
-      game.instructions.innerText = "";
+      game.instructions.innerText = "Game over!";
       if (this.player1PointsCounter > this.player2PointsCounter) {
         game.instructions.innerHTML =
           "<a href='./index.html'> Player 1 wins! Click here To start a new game!</a>";
-      } else if (this.player1PointsCounter < this.player2sPointsCounter) {
-        game.imstructions.innerHTML =
+      }
+      if (this.player1PointsCounter < this.player2PointsCounter) {
+        game.instructions.innerHTML =
           "<a href='./index.html'> Player 2 wins! Click here To start a new game!</a>";
-      } else {
+      }
+      if (this.player1PointsCounter === this.player2PointsCounter) {
         game.instructions.innerHTML =
           "<a href='./index.html'> It was a draw! Click here To start a new game!</a>";
       }

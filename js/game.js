@@ -505,7 +505,7 @@ class Players {
       game.instructions.innerText = "";
       if (this.player1PointsCounter > this.player2PointsCounter) {
         game.instructions.innerHTML =
-          "<a href='../html/game.html'> Player 1 wins! Click here zo start a new game!</a>";
+          "<a href='../html/game.html'> Player 1 wins! Click here to start a new game!</a>";
       }
       if (this.player1PointsCounter < this.player2PointsCounter) {
         game.instructions.innerHTML =

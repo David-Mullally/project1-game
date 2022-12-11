@@ -6,29 +6,29 @@ body {
     height: 40vw;
 }
 
-img {
+img{
     width: 30px;
     height: 20px
 }
 
-a {
+a{
     color: #fff;
     text-decoration: none;
 }
 
 .board-squares {
-    background-position-y: 1vw;
+    background-position-y: 1vw ;
     border: 0.1px dashed #880808;
     height: 32%;
     width: 32%;
 }
 
-.chosen-card {
+.chosen-card{
     height: 6vw;
     width: 10vw;
 }
 
-.player-active-tokens {
+.player-active-tokens{
     background-color: #000;
     border-radius: 50%;
     height: 2vw;
@@ -37,7 +37,7 @@ a {
     width: 2vw
 }
 
-.players-cards {
+.players-cards{
     align-items: center;
     background-color: white;
     background-size: contain;
@@ -49,26 +49,26 @@ a {
     width: 10vw;
 }
 
-.player1s-cards {
+.player1s-cards{
     background-color: lightblue;
 }
 
-.player2s-cards {
+.player2s-cards{
     background-color: lightcoral;
 }
 
-.players-name {
+.players-name{
     color: #fff;
     font-size: 2.2vw;
     margin-bottom: 2vw;
 }
 
-.players-points {
+.players-points{
     color: #fff;
     font-size: 3vw;
 }
 
-.players-side {
+.players-side{
     bottom: 3vw;
     height: 30vw;
     position: relative;
@@ -76,7 +76,7 @@ a {
     width: 10vw;
 }
 
-#board {
+#board{
     background-color: antiquewhite;
     display: flex;
     flex-wrap: wrap;
@@ -86,24 +86,28 @@ a {
     width: 40vw;
 }
 
-#game-area {
+#game-area{
     display: flex;
     justify-content: space-around;
 }
 
-#instructions {
+#instructions{
     color: #fff;
     font-size: 2vw;
     margin-top: 3vw;
     text-align: center;
 }
 
-#player1-chosen-card {
+#player1-chosen-card{
     background-color: lightblue;
     visibility: hidden;
 }
-
-#player2-chosen-card {
+#player2-chosen-card{
     background-color: lightcoral;
     visibility: hidden;
 }
+
+
+
+
+

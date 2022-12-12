@@ -428,11 +428,11 @@ class Game {
     this.instructions = document.getElementById("instructions");
     this.player1ActiveToken = document.getElementById("player1-active-token");
     this.player2ActiveToken = document.getElementById("player2-active-token");
-    instructions.addEventListener("click", () => {
+    this.instructions.addEventListener("click", () => {
       if (this.gameInProgress === false) {
         const players = new Players();
         this.gameInProgress = true;
-        instructions.innerText = "flipping a coin to see who goes first";
+        this.instructions.innerText = "flipping a coin to see who goes first";
         this.timer = setInterval(() => {
           if (this.playerActive === true) {
             this.player1ActiveToken.style.backgroundColor = "green";
@@ -505,15 +505,15 @@ class Players {
       game.instructions.innerText = "";
       if (this.player1PointsCounter > this.player2PointsCounter) {
         game.instructions.innerHTML =
-          "<a href='../html/game.html'> Player 1 wins! Click here to start a new game!</a>";
+          "<a href='../html/game.html'> Player 1 wins! Click here to play again!</a>";
       }
       if (this.player1PointsCounter < this.player2PointsCounter) {
         game.instructions.innerHTML =
-          "<a href='../html/game.html'> Player 2 wins! Click here to start a new game!</a>";
+          "<a href='../html/game.html'> Player 2 wins! Click here to play again!</a>";
       }
       if (this.player1PointsCounter === this.player2PointsCounter) {
         game.instructions.innerHTML =
-          "<a href='../html/game.html'> It was a draw! Click here to start a new game!</a>";
+          "<a href='../html/game.html'> It was a draw! Click here to play again!</a>";
       }
     }
   }
@@ -532,15 +532,15 @@ class Players {
       game.instructions.innerText = "Game over!";
       if (this.player1PointsCounter > this.player2PointsCounter) {
         game.instructions.innerHTML =
-          "<a href='../html/game.html'> Player 1 wins! Click here to start a new game!</a>";
+          "<a href='../html/game.html'> Player 1 wins! Click here to play again!</a>";
       }
       if (this.player1PointsCounter < this.player2PointsCounter) {
         game.instructions.innerHTML =
-          "<a href='../html/game.html'> Player 2 wins! Click here to start a new game!</a>";
+          "<a href='../html/game.html'> Player 2 wins! Click here to play again!</a>";
       }
       if (this.player1PointsCounter === this.player2PointsCounter) {
         game.instructions.innerHTML =
-          "<a href='../html/game.html'> It was a draw! Click here to start a new game!</a>";
+          "<a href='../html/game.html'> It was a draw! Click here to play again!</a>";
       }
     }
   }

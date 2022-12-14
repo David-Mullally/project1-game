@@ -588,26 +588,6 @@ class Players {
   }
 
   player1BoardEventListeners() {
-    /*boardSquaresFrontEnd.forEach((elm) => {
-      elm.addEventListener("click", () => {
-        if (
-          this.player1SquareChosen === false &&
-          this.player1CardChosen === true
-        ) {
-          elm.style.backgroundImage =
-            this.player1sChosenCard.style.backgroundImage;
-          elm.style.backgroundSize = "contain";
-          elm.style.backgroundRepeat = "no-repeat";
-          elm.style.backgroundColor = this.player1Color;
-          elm.style.backgroundColor = this.player1SquareChosen = true;
-          game.player1ActiveToken.style.backgroundColor = "gray";
-          game.player2ActiveToken.style.backgroundColor = "green";
-          game.movesCounter++;
-          this.player1sChosenCard.style.visibility = "hidden";
-          this.player2Active();
-        }
-      });
-    });*/
     for (let i = 6; i < 9; i++) {
       boardSquaresFrontEnd[i].addEventListener("click", () => {
         if (
@@ -837,26 +817,6 @@ class Players {
   }
 
   player2BoardEventListeners() {
-    /*boardSquaresFrontEnd.forEach((elm) => {
-      elm.addEventListener("click", () => {
-        if (
-          this.player2SquareChosen === false &&
-          this.player2CardChosen === true
-        ) {
-          elm.style.backgroundImage =
-            this.player2sChosenCard.style.backgroundImage;
-          elm.style.backgroundSize = "contain";
-          elm.style.backgroundRepeat = "no-repeat";
-          elm.style.backgroundColor = this.player2Color;
-          this.player2SquareChosen = true;
-          game.player2ActiveToken.style.backgroundColor = "gray";
-          game.player1ActiveToken.style.backgroundColor = "green";
-          game.movesCounter++;
-          this.player2sChosenCard.style.visibility = "hidden";
-          this.player1Active();
-        }
-      });
-    });*/
     for (let i = 6; i < 9; i++) {
       boardSquaresFrontEnd[i].addEventListener("click", () => {
         if (
@@ -1089,56 +1049,3 @@ class Players {
 }
 
 const game = new Game();
-
-/*if (
-  this.backEndBoard[this.numberSquare9].t >
-    this.backEndBoard[this.numberSquare9 - 5].d &&
-  this.backEndBoard[this.numberSquare9 - 5].p === 2
-) {
-  this.boardSquaresFrontEnd[this.numberSquare9 - 5].style.backgroundColor =
-    this.player1Color;
-  this.backEndBoard[this.numberSquare9 - 5].p = 1;
-  this.player1PointsCounter++;
-  this.player2PointsCounter--;
-  this.player1Points.innerText = this.player1PointsCounter;
-  this.player2Points.innerText = this.player2PointsCounter;
-}
-if (
-  this.backEndBoard[this.numberSquare9].r >
-    this.backEndBoard[this.numberSquare9 + 1].l &&
-  this.backEndBoard[this.numberSquare9 + 1].p === 2
-) {
-  this.boardSquaresFrontEnd[this.numberSquare9 + 1].style.backgroundColor =
-    this.player1Color;
-  this.backEndBoard[this.numberSquare9 + 1].p = 1;
-  this.player1PointsCounter++;
-  this.player2PointsCounter--;
-  this.player1Points.innerText = this.player1PointsCounter;
-  this.player2Points.innerText = this.player2PointsCounter;
-}
-if (
-  this.backEndBoard[this.numberSquare9].d >
-    this.backEndBoard[this.numberSquare9 + 5].t &&
-  this.backEndBoard[this.numberSquare9 + 5].p === 2
-) {
-  this.boardSquaresFrontEnd[this.numberSquare9 + 5].style.backgroundColor =
-    this.player1Color;
-  this.backEndBoard[this.numberSquare9 + 5].p = 1;
-  this.player1PointsCounter++;
-  this.player2PointsCounter--;
-  this.player1Points.innerText = this.player1PointsCounter;
-  this.player2Points.innerText = this.player2PointsCounter;
-}
-if (
-  this.backEndBoard[this.numberSquare9].l >
-    this.backEndBoard[this.numberSquare9 - 1].r &&
-  this.backEndBoard[this.numberSquare9 - 1].p === 2
-) {
-  this.boardSquaresFrontEnd[this.numberSquare9 - 1].style.backgroundColor =
-    this.player1Color;
-  this.backEndBoard[this.numberSquare9 - 1].p = 1;
-  this.player1PointsCounter++;
-  this.player2PointsCounter--;
-  this.player1Points.innerText = this.player1PointsCounter;
-  this.player2Points.innerText = this.player2PointsCounter;
-}*/

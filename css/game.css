@@ -31,6 +31,12 @@ a{
     width: 10vw;
 }
 
+#home-button{
+    font-size: 2vw;
+    left: 41vw;
+    position: relative;
+}
+
 #instructions {
     background-color: bisque;
     border-radius: 25%;

@@ -588,462 +588,161 @@ class Players {
   }
 
   player1BoardEventListeners() {
-    for (let i = 6; i < 9; i++) {
-      boardSquaresFrontEnd[i].addEventListener("click", () => {
-        if (
-          this.player1SquareChosen === false &&
-          this.player1CardChosen === true &&
-          game.boardSquareStatuses[i].blocked === false
-        ) {
-          boardSquaresFrontEnd[i].style.backgroundImage =
-            this.player1sChosenCard.style.backgroundImage;
-          boardSquaresFrontEnd[i].style.backgroundSize = "contain";
-          boardSquaresFrontEnd[i].style.backgroundRepeat = "no-repeat";
-          boardSquaresFrontEnd[i].style.backgroundColor = this.player1Color;
-          boardSquaresFrontEnd[i].style.backgroundColor =
-            this.player1SquareChosen = true;
-          game.player1ActiveToken.style.backgroundColor = "gray";
-          game.player2ActiveToken.style.backgroundColor = "green";
-          game.movesCounter++;
-          this.player1sChosenCard.style.visibility = "hidden";
-          boardBackEnd[i] = this.player1sChosenCardBackEnd;
-          game.boardSquareStatuses[i].blocked = true;
+    for (let i = 6; i < 19; i++) {
+      if ((i >= 6 && i < 9) || (i >= 11 && i < 14) || (i >= 16 && i < 19)) {
+        boardSquaresFrontEnd[i].addEventListener("click", () => {
           if (
-            boardBackEnd[i].top > boardBackEnd[i - 5].bottom &&
-            boardBackEnd[i - 5].player === 2
+            this.player1SquareChosen === false &&
+            this.player1CardChosen === true &&
+            game.boardSquareStatuses[i].blocked === false
           ) {
-            boardSquaresFrontEnd[i - 5].style.backgroundColor =
-              this.player1Color;
-            this.player1PointsCounter++;
-            this.player2PointsCounter--;
-            boardBackEnd[i - 5].player = 1;
-            this.player1Points.innerText = this.player1PointsCounter;
-            this.player2Points.innerText = this.player2PointsCounter;
+            boardSquaresFrontEnd[i].style.backgroundImage =
+              this.player1sChosenCard.style.backgroundImage;
+            boardSquaresFrontEnd[i].style.backgroundSize = "contain";
+            boardSquaresFrontEnd[i].style.backgroundRepeat = "no-repeat";
+            boardSquaresFrontEnd[i].style.backgroundColor = this.player1Color;
+            boardSquaresFrontEnd[i].style.backgroundColor =
+              this.player1SquareChosen = true;
+            game.player1ActiveToken.style.backgroundColor = "gray";
+            game.player2ActiveToken.style.backgroundColor = "green";
+            game.movesCounter++;
+            this.player1sChosenCard.style.visibility = "hidden";
+            boardBackEnd[i] = this.player1sChosenCardBackEnd;
+            game.boardSquareStatuses[i].blocked = true;
+            if (
+              boardBackEnd[i].top > boardBackEnd[i - 5].bottom &&
+              boardBackEnd[i - 5].player === 2
+            ) {
+              boardSquaresFrontEnd[i - 5].style.backgroundColor =
+                this.player1Color;
+              this.player1PointsCounter++;
+              this.player2PointsCounter--;
+              boardBackEnd[i - 5].player = 1;
+              this.player1Points.innerText = this.player1PointsCounter;
+              this.player2Points.innerText = this.player2PointsCounter;
+            }
+            if (
+              boardBackEnd[i].bottom > boardBackEnd[i + 5].top &&
+              boardBackEnd[i + 5].player === 2
+            ) {
+              boardSquaresFrontEnd[i + 5].style.backgroundColor =
+                this.player1Color;
+              this.player1PointsCounter++;
+              this.player2PointsCounter--;
+              boardBackEnd[i + 5].player = 1;
+              this.player1Points.innerText = this.player1PointsCounter;
+              this.player2Points.innerText = this.player2PointsCounter;
+            }
+            if (
+              boardBackEnd[i].left > boardBackEnd[i - 1].right &&
+              boardBackEnd[i - 1].player === 2
+            ) {
+              boardSquaresFrontEnd[i - 1].style.backgroundColor =
+                this.player1Color;
+              this.player1PointsCounter++;
+              this.player2PointsCounter--;
+              boardBackEnd[i - 1].player = 1;
+              this.player1Points.innerText = this.player1PointsCounter;
+              this.player2Points.innerText = this.player2PointsCounter;
+            }
+            if (
+              boardBackEnd[i].right > boardBackEnd[i + 1].left &&
+              boardBackEnd[i + 1].player === 2
+            ) {
+              boardSquaresFrontEnd[i + 1].style.backgroundColor =
+                this.player1Color;
+              this.player1PointsCounter++;
+              this.player2PointsCounter--;
+              boardBackEnd[i + 1].player = 1;
+              this.player1Points.innerText = this.player1PointsCounter;
+              this.player2Points.innerText = this.player2PointsCounter;
+            }
+            game.player1ActiveToken.style.backgroundColor = "gray";
+            game.player2ActiveToken.style.backgroundColor = "green";
+            this.player2Active();
           }
-          if (
-            boardBackEnd[i].bottom > boardBackEnd[i + 5].top &&
-            boardBackEnd[i + 5].player === 2
-          ) {
-            boardSquaresFrontEnd[i + 5].style.backgroundColor =
-              this.player1Color;
-            this.player1PointsCounter++;
-            this.player2PointsCounter--;
-            boardBackEnd[i + 5].player = 1;
-            this.player1Points.innerText = this.player1PointsCounter;
-            this.player2Points.innerText = this.player2PointsCounter;
-          }
-          if (
-            boardBackEnd[i].left > boardBackEnd[i - 1].right &&
-            boardBackEnd[i - 1].player === 2
-          ) {
-            boardSquaresFrontEnd[i - 1].style.backgroundColor =
-              this.player1Color;
-            this.player1PointsCounter++;
-            this.player2PointsCounter--;
-            boardBackEnd[i - 1].player = 1;
-            this.player1Points.innerText = this.player1PointsCounter;
-            this.player2Points.innerText = this.player2PointsCounter;
-          }
-          if (
-            boardBackEnd[i].right > boardBackEnd[i + 1].left &&
-            boardBackEnd[i + 1].player === 2
-          ) {
-            boardSquaresFrontEnd[i + 1].style.backgroundColor =
-              this.player1Color;
-            this.player1PointsCounter++;
-            this.player2PointsCounter--;
-            boardBackEnd[i + 1].player = 1;
-            this.player1Points.innerText = this.player1PointsCounter;
-            this.player2Points.innerText = this.player2PointsCounter;
-          }
-          game.player1ActiveToken.style.backgroundColor = "gray";
-          game.player2ActiveToken.style.backgroundColor = "green";
-          this.player2Active();
-        }
-      });
-    }
-
-    for (let i = 11; i < 14; i++) {
-      boardSquaresFrontEnd[i].addEventListener("click", () => {
-        if (
-          this.player1SquareChosen === false &&
-          this.player1CardChosen === true &&
-          game.boardSquareStatuses[i].blocked === false
-        ) {
-          boardSquaresFrontEnd[i].style.backgroundImage =
-            this.player1sChosenCard.style.backgroundImage;
-          boardSquaresFrontEnd[i].style.backgroundSize = "contain";
-          boardSquaresFrontEnd[i].style.backgroundRepeat = "no-repeat";
-          boardSquaresFrontEnd[i].style.backgroundColor = this.player1Color;
-          boardSquaresFrontEnd[i].style.backgroundColor =
-            this.player1SquareChosen = true;
-          game.player1ActiveToken.style.backgroundColor = "gray";
-          game.player2ActiveToken.style.backgroundColor = "green";
-          game.movesCounter++;
-          this.player1sChosenCard.style.visibility = "hidden";
-          boardBackEnd[i] = this.player1sChosenCardBackEnd;
-          game.boardSquareStatuses[i].blocked = true;
-          if (
-            boardBackEnd[i].top > boardBackEnd[i - 5].bottom &&
-            boardBackEnd[i - 5].player === 2
-          ) {
-            boardSquaresFrontEnd[i - 5].style.backgroundColor =
-              this.player1Color;
-            this.player1PointsCounter++;
-            this.player2PointsCounter--;
-            boardBackEnd[i - 5].player = 1;
-            this.player1Points.innerText = this.player1PointsCounter;
-            this.player2Points.innerText = this.player2PointsCounter;
-          }
-          if (
-            boardBackEnd[i].bottom > boardBackEnd[i + 5].top &&
-            boardBackEnd[i + 5].player === 2
-          ) {
-            boardSquaresFrontEnd[i + 5].style.backgroundColor =
-              this.player1Color;
-            this.player1PointsCounter++;
-            this.player2PointsCounter--;
-            boardBackEnd[i + 5].player = 1;
-            this.player1Points.innerText = this.player1PointsCounter;
-            this.player2Points.innerText = this.player2PointsCounter;
-          }
-          if (
-            boardBackEnd[i].left > boardBackEnd[i - 1].right &&
-            boardBackEnd[i - 1].player === 2
-          ) {
-            boardSquaresFrontEnd[i - 1].style.backgroundColor =
-              this.player1Color;
-            this.player1PointsCounter++;
-            this.player2PointsCounter--;
-            boardBackEnd[i - 1].player = 1;
-            this.player1Points.innerText = this.player1PointsCounter;
-            this.player2Points.innerText = this.player2PointsCounter;
-          }
-          if (
-            boardBackEnd[i].right > boardBackEnd[i + 1].left &&
-            boardBackEnd[i + 1].player === 2
-          ) {
-            boardSquaresFrontEnd[i + 1].style.backgroundColor =
-              this.player1Color;
-            this.player1PointsCounter++;
-            this.player2PointsCounter--;
-            boardBackEnd[i + 1].player = 1;
-            this.player1Points.innerText = this.player1PointsCounter;
-            this.player2Points.innerText = this.player2PointsCounter;
-          }
-          game.player1ActiveToken.style.backgroundColor = "gray";
-          game.player2ActiveToken.style.backgroundColor = "green";
-          this.player2Active();
-        }
-      });
-    }
-
-    for (let i = 16; i < 19; i++) {
-      boardSquaresFrontEnd[i].addEventListener("click", () => {
-        if (
-          this.player1SquareChosen === false &&
-          this.player1CardChosen === true &&
-          game.boardSquareStatuses[i].blocked === false
-        ) {
-          boardSquaresFrontEnd[i].style.backgroundImage =
-            this.player1sChosenCard.style.backgroundImage;
-          boardSquaresFrontEnd[i].style.backgroundSize = "contain";
-          boardSquaresFrontEnd[i].style.backgroundRepeat = "no-repeat";
-          boardSquaresFrontEnd[i].style.backgroundColor = this.player1Color;
-          boardSquaresFrontEnd[i].style.backgroundColor =
-            this.player1SquareChosen = true;
-          game.player1ActiveToken.style.backgroundColor = "green";
-          game.player2ActiveToken.style.backgroundColor = "gray";
-          game.movesCounter++;
-          this.player1sChosenCard.style.visibility = "hidden";
-          boardBackEnd[i] = this.player1sChosenCardBackEnd;
-          game.boardSquareStatuses[i].blocked = true;
-
-          if (
-            boardBackEnd[i].top > boardBackEnd[i - 5].bottom &&
-            boardBackEnd[i - 5].player === 2
-          ) {
-            boardSquaresFrontEnd[i - 5].style.backgroundColor =
-              this.player1Color;
-            this.player1PointsCounter++;
-            this.player2PointsCounter--;
-            boardBackEnd[i - 5].player = 1;
-            this.player1Points.innerText = this.player1PointsCounter;
-            this.player2Points.innerText = this.player2PointsCounter;
-          }
-          if (
-            boardBackEnd[i].bottom > boardBackEnd[i + 5].top &&
-            boardBackEnd[i + 5].player === 2
-          ) {
-            boardSquaresFrontEnd[i + 5].style.backgroundColor =
-              this.player1Color;
-            this.player1PointsCounter++;
-            this.player2PointsCounter--;
-            boardBackEnd[i + 5].player = 1;
-            this.player1Points.innerText = this.player1PointsCounter;
-            this.player2Points.innerText = this.player2PointsCounter;
-          }
-          if (
-            boardBackEnd[i].left > boardBackEnd[i - 1].right &&
-            boardBackEnd[i - 1].player === 2
-          ) {
-            boardSquaresFrontEnd[i - 1].style.backgroundColor =
-              this.player1Color;
-            this.player1PointsCounter++;
-            this.player2PointsCounter--;
-            boardBackEnd[i - 1].player = 1;
-            this.player1Points.innerText = this.player1PointsCounter;
-            this.player2Points.innerText = this.player2PointsCounter;
-          }
-          if (
-            boardBackEnd[i].right > boardBackEnd[i + 1].left &&
-            boardBackEnd[i + 1].player === 2
-          ) {
-            boardSquaresFrontEnd[i + 1].style.backgroundColor =
-              this.player1Color;
-            this.player1PointsCounter++;
-            this.player2PointsCounter--;
-            boardBackEnd[i + 1].player = 1;
-            this.player1Points.innerText = this.player1PointsCounter;
-            this.player2Points.innerText = this.player2PointsCounter;
-          }
-          game.player1ActiveToken.style.backgroundColor = "gray";
-          game.player2ActiveToken.style.backgroundColor = "green";
-
-          this.player2Active();
-        }
-      });
+        });
+      }
     }
   }
 
   player2BoardEventListeners() {
-    for (let i = 6; i < 9; i++) {
-      boardSquaresFrontEnd[i].addEventListener("click", () => {
-        if (
-          this.player2SquareChosen === false &&
-          this.player2CardChosen === true &&
-          game.boardSquareStatuses[i].blocked === false
-        ) {
-          boardSquaresFrontEnd[i].style.backgroundImage =
-            this.player2sChosenCard.style.backgroundImage;
-          boardSquaresFrontEnd[i].style.backgroundSize = "contain";
-          boardSquaresFrontEnd[i].style.backgroundRepeat = "no-repeat";
-          boardSquaresFrontEnd[i].style.backgroundColor = this.player2Color;
-          boardSquaresFrontEnd[i].style.backgroundColor =
-            this.player2SquareChosen = true;
-          game.player1ActiveToken.style.backgroundColor = "green";
-          game.player2ActiveToken.style.backgroundColor = "gray";
-          game.movesCounter++;
-          this.player2sChosenCard.style.visibility = "hidden";
-          boardBackEnd[i] = this.player2sChosenCardBackEnd;
-          game.boardSquareStatuses[i].blocked = true;
+    for (let i = 6; i < 19; i++) {
+      if ((i >= 6 && i < 9) || (i >= 11 && i < 14) || (i >= 16 && i < 19)) {
+        boardSquaresFrontEnd[i].addEventListener("click", () => {
+          if (
+            this.player2SquareChosen === false &&
+            this.player2CardChosen === true &&
+            game.boardSquareStatuses[i].blocked === false
+          ) {
+            boardSquaresFrontEnd[i].style.backgroundImage =
+              this.player2sChosenCard.style.backgroundImage;
+            boardSquaresFrontEnd[i].style.backgroundSize = "contain";
+            boardSquaresFrontEnd[i].style.backgroundRepeat = "no-repeat";
+            boardSquaresFrontEnd[i].style.backgroundColor = this.player2Color;
+            boardSquaresFrontEnd[i].style.backgroundColor =
+              this.player2SquareChosen = true;
+            game.player1ActiveToken.style.backgroundColor = "green";
+            game.player2ActiveToken.style.backgroundColor = "gray";
+            game.movesCounter++;
+            this.player2sChosenCard.style.visibility = "hidden";
+            boardBackEnd[i] = this.player2sChosenCardBackEnd;
+            game.boardSquareStatuses[i].blocked = true;
 
-          if (
-            boardBackEnd[i].top > boardBackEnd[i - 5].bottom &&
-            boardBackEnd[i - 5].player === 1
-          ) {
-            boardSquaresFrontEnd[i - 5].style.backgroundColor =
-              this.player2Color;
-            this.player1PointsCounter--;
-            this.player2PointsCounter++;
-            boardBackEnd[i - 5].player = 2;
-            this.player1Points.innerText = this.player1PointsCounter;
-            this.player2Points.innerText = this.player2PointsCounter;
+            if (
+              boardBackEnd[i].top > boardBackEnd[i - 5].bottom &&
+              boardBackEnd[i - 5].player === 1
+            ) {
+              boardSquaresFrontEnd[i - 5].style.backgroundColor =
+                this.player2Color;
+              this.player1PointsCounter--;
+              this.player2PointsCounter++;
+              boardBackEnd[i - 5].player = 2;
+              this.player1Points.innerText = this.player1PointsCounter;
+              this.player2Points.innerText = this.player2PointsCounter;
+            }
+            if (
+              boardBackEnd[i].bottom > boardBackEnd[i + 5].top &&
+              boardBackEnd[i + 5].player === 1
+            ) {
+              boardSquaresFrontEnd[i + 5].style.backgroundColor =
+                this.player2Color;
+              this.player1PointsCounter--;
+              this.player2PointsCounter++;
+              boardBackEnd[i + 5].player = 2;
+              this.player1Points.innerText = this.player1PointsCounter;
+              this.player2Points.innerText = this.player2PointsCounter;
+            }
+            if (
+              boardBackEnd[i].left > boardBackEnd[i - 1].right &&
+              boardBackEnd[i - 1].player === 1
+            ) {
+              boardSquaresFrontEnd[i - 1].style.backgroundColor =
+                this.player2Color;
+              this.player1PointsCounter--;
+              this.player2PointsCounter++;
+              boardBackEnd[i - 1].player = 2;
+              this.player1Points.innerText = this.player1PointsCounter;
+              this.player2Points.innerText = this.player2PointsCounter;
+            }
+            if (
+              boardBackEnd[i].right > boardBackEnd[i + 1].left &&
+              boardBackEnd[i + 1].player === 1
+            ) {
+              boardSquaresFrontEnd[i + 1].style.backgroundColor =
+                this.player2Color;
+              this.player1PointsCounter--;
+              this.player2PointsCounter++;
+              boardBackEnd[i + 1].player = 2;
+              this.player1Points.innerText = this.player1PointsCounter;
+              this.player2Points.innerText = this.player2PointsCounter;
+            }
+            game.player2ActiveToken.style.backgroundColor = "gray";
+            game.player1ActiveToken.style.backgroundColor = "green";
+            this.player1Active();
           }
-          if (
-            boardBackEnd[i].bottom > boardBackEnd[i + 5].top &&
-            boardBackEnd[i + 5].player === 1
-          ) {
-            boardSquaresFrontEnd[i + 5].style.backgroundColor =
-              this.player2Color;
-            this.player1PointsCounter--;
-            this.player2PointsCounter++;
-            boardBackEnd[i + 5].player = 2;
-            this.player1Points.innerText = this.player1PointsCounter;
-            this.player2Points.innerText = this.player2PointsCounter;
-          }
-          if (
-            boardBackEnd[i].left > boardBackEnd[i - 1].right &&
-            boardBackEnd[i - 1].player === 1
-          ) {
-            boardSquaresFrontEnd[i - 1].style.backgroundColor =
-              this.player2Color;
-            this.player1PointsCounter--;
-            this.player2PointsCounter++;
-            boardBackEnd[i - 1].player = 2;
-            this.player1Points.innerText = this.player1PointsCounter;
-            this.player2Points.innerText = this.player2PointsCounter;
-          }
-          if (
-            boardBackEnd[i].right > boardBackEnd[i + 1].left &&
-            boardBackEnd[i + 1].player === 1
-          ) {
-            boardSquaresFrontEnd[i + 1].style.backgroundColor =
-              this.player2Color;
-            this.player1PointsCounter--;
-            this.player2PointsCounter++;
-            boardBackEnd[i + 1].player = 2;
-            this.player1Points.innerText = this.player1PointsCounter;
-            this.player2Points.innerText = this.player2PointsCounter;
-          }
-          game.player2ActiveToken.style.backgroundColor = "gray";
-          game.player1ActiveToken.style.backgroundColor = "green";
-          this.player1Active();
-        }
-      });
-    }
-
-    for (let i = 11; i < 14; i++) {
-      boardSquaresFrontEnd[i].addEventListener("click", () => {
-        if (
-          this.player2SquareChosen === false &&
-          this.player2CardChosen === true &&
-          game.boardSquareStatuses[i].blocked === false
-        ) {
-          boardSquaresFrontEnd[i].style.backgroundImage =
-            this.player2sChosenCard.style.backgroundImage;
-          boardSquaresFrontEnd[i].style.backgroundSize = "contain";
-          boardSquaresFrontEnd[i].style.backgroundRepeat = "no-repeat";
-          boardSquaresFrontEnd[i].style.backgroundColor = this.player2Color;
-          boardSquaresFrontEnd[i].style.backgroundColor =
-            this.player2SquareChosen = true;
-          game.player1ActiveToken.style.backgroundColor = "green";
-          game.player2ActiveToken.style.backgroundColor = "gray";
-          game.movesCounter++;
-          this.player2sChosenCard.style.visibility = "hidden";
-          boardBackEnd[i] = this.player2sChosenCardBackEnd;
-          game.boardSquareStatuses[i].blocked = true;
-
-          if (
-            boardBackEnd[i].top > boardBackEnd[i - 5].bottom &&
-            boardBackEnd[i - 5].player === 1
-          ) {
-            boardSquaresFrontEnd[i - 5].style.backgroundColor =
-              this.player2Color;
-            this.player1PointsCounter--;
-            this.player2PointsCounter++;
-            boardBackEnd[i - 5].player = 2;
-            this.player1Points.innerText = this.player1PointsCounter;
-            this.player2Points.innerText = this.player2PointsCounter;
-          }
-          if (
-            boardBackEnd[i].bottom > boardBackEnd[i + 5].top &&
-            boardBackEnd[i + 5].player === 1
-          ) {
-            boardSquaresFrontEnd[i + 5].style.backgroundColor =
-              this.player2Color;
-            this.player1PointsCounter--;
-            this.player2PointsCounter++;
-            boardBackEnd[i + 5].player = 2;
-            this.player1Points.innerText = this.player1PointsCounter;
-            this.player2Points.innerText = this.player2PointsCounter;
-          }
-          if (
-            boardBackEnd[i].left > boardBackEnd[i - 1].right &&
-            boardBackEnd[i - 1].player === 1
-          ) {
-            boardSquaresFrontEnd[i - 1].style.backgroundColor =
-              this.player2Color;
-            this.player1PointsCounter--;
-            this.player2PointsCounter++;
-            boardBackEnd[i - 1].player = 2;
-            this.player1Points.innerText = this.player1PointsCounter;
-            this.player2Points.innerText = this.player2PointsCounter;
-          }
-          if (
-            boardBackEnd[i].right > boardBackEnd[i + 1].left &&
-            boardBackEnd[i + 1].player === 1
-          ) {
-            boardSquaresFrontEnd[i + 1].style.backgroundColor =
-              this.player2Color;
-            this.player1PointsCounter--;
-            this.player2PointsCounter++;
-            boardBackEnd[i + 1].player = 2;
-            this.player1Points.innerText = this.player1PointsCounter;
-            this.player2Points.innerText = this.player2PointsCounter;
-          }
-          game.player2ActiveToken.style.backgroundColor = "gray";
-          game.player1ActiveToken.style.backgroundColor = "green";
-          this.player1Active();
-        }
-      });
-    }
-
-    for (let i = 16; i < 19; i++) {
-      boardSquaresFrontEnd[i].addEventListener("click", () => {
-        if (
-          this.player2SquareChosen === false &&
-          this.player2CardChosen === true &&
-          game.boardSquareStatuses[i].blocked === false
-        ) {
-          boardSquaresFrontEnd[i].style.backgroundImage =
-            this.player2sChosenCard.style.backgroundImage;
-          boardSquaresFrontEnd[i].style.backgroundSize = "contain";
-          boardSquaresFrontEnd[i].style.backgroundRepeat = "no-repeat";
-          boardSquaresFrontEnd[i].style.backgroundColor = this.player2Color;
-          boardSquaresFrontEnd[i].style.backgroundColor =
-            this.player2SquareChosen = true;
-          game.player1ActiveToken.style.backgroundColor = "green";
-          game.player2ActiveToken.style.backgroundColor = "gray";
-          game.movesCounter++;
-          this.player2sChosenCard.style.visibility = "hidden";
-          boardBackEnd[i] = this.player2sChosenCardBackEnd;
-          game.boardSquareStatuses[i].blocked = true;
-
-          if (
-            boardBackEnd[i].top > boardBackEnd[i - 5].bottom &&
-            boardBackEnd[i - 5].player === 1
-          ) {
-            boardSquaresFrontEnd[i - 5].style.backgroundColor =
-              this.player2Color;
-            this.player1PointsCounter--;
-            this.player2PointsCounter++;
-            boardBackEnd[i - 5].player = 2;
-            this.player1Points.innerText = this.player1PointsCounter;
-            this.player2Points.innerText = this.player2PointsCounter;
-          }
-          if (
-            boardBackEnd[i].bottom > boardBackEnd[i + 5].top &&
-            boardBackEnd[i + 5].player === 1
-          ) {
-            boardSquaresFrontEnd[i + 5].style.backgroundColor =
-              this.player2Color;
-            this.player1PointsCounter--;
-            this.player2PointsCounter++;
-            boardBackEnd[i + 5].player = 2;
-            this.player1Points.innerText = this.player1PointsCounter;
-            this.player2Points.innerText = this.player2PointsCounter;
-          }
-          if (
-            boardBackEnd[i].left > boardBackEnd[i - 1].right &&
-            boardBackEnd[i - 1].player === 1
-          ) {
-            boardSquaresFrontEnd[i - 1].style.backgroundColor =
-              this.player2Color;
-            this.player1PointsCounter--;
-            this.player2PointsCounter++;
-            boardBackEnd[i - 1].player = 2;
-            this.player1Points.innerText = this.player1PointsCounter;
-            this.player2Points.innerText = this.player2PointsCounter;
-          }
-          if (
-            boardBackEnd[i].right > boardBackEnd[i + 1].left &&
-            boardBackEnd[i + 1].player === 1
-          ) {
-            boardSquaresFrontEnd[i + 1].style.backgroundColor =
-              this.player2Color;
-            this.player1PointsCounter--;
-            this.player2PointsCounter++;
-            boardBackEnd[i + 1].player = 2;
-            this.player1Points.innerText = this.player1PointsCounter;
-            this.player2Points.innerText = this.player2PointsCounter;
-          }
-          game.player2ActiveToken.style.backgroundColor = "gray";
-          game.player1ActiveToken.style.backgroundColor = "green";
-
-          this.player1Active();
-        }
-      });
+        });
+      }
     }
   }
 }
